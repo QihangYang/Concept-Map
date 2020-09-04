@@ -1,0 +1,153 @@
+---
+title: '6.23'
+author: "Yunan Xu,yx2585"
+date: "6/22/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(pdftools)
+
+library(tesseract)
+
+pdf_path<-"F:\\Courses\\[GR5241] Statistical Machine Learning\\HWs\\HW1\\HW1_Spring2020.pdf"
+
+list_output<-pdftools::pdf_text(pdf_path)
+
+
+page1<-list_output[1]
+
+page2<-list_output[2]
+
+page3<-list_output[3]
+
+page4<-list_output[4]
+
+
+
+```
+
+
+```{r}
+exp_p1<-"Problem\\s1+"
+
+exp_p2<-"Problem\\s2"
+
+exp_p3<-"Problem\\s3"
+
+
+
+regmatches(page1,gregexpr(page1,pattern=exp_p1))
+
+P1_position<-gregexpr(page1,pattern=exp_p1)
+
+P2_position<-gregexpr(page1,pattern=exp_p2)
+
+
+P3_position<-gregexpr(page3,pattern=exp_p3)
+
+
+
+
+
+P1_content<-substr(page1,start = 170,stop=1251)
+
+P2_content<-paste(substr(page1,start = 1251,stop=nchar(page1)),page2)
+
+P3_content<-paste(page3,page4)
+
+content<-c(P1_content,P2_content,P3_content)
+
+problem<-c("P1","P2","P3")
+
+homework<-data.frame(problem,content)
+
+homework$content<-as.character(homework$content)
+
+library(tidyverse)
+
+library(dplyr)
+
+library(SnowballC)
+
+library(tokenizers)
+
+library(tidytext)
+
+unnested_homework<-homework %>% unnest_tokens(output = "word",token = "words",input = content)%>% anti_join(stop_words) %>% count(problem,word)%>% mutate(word=wordStem(word))
+
+print(unnested_homework)
+
+homework_matrix<- unnested_homework %>% cast_dtm(document = problem, term = word, value = n, weighting = tm::weightTf)
+
+
+
+```
+
+
+
+```{r}
+# spearate by train and test
+
+
+
+library(topicmodels)
+
+lda_model<- LDA(homework_matrix, k = 6, method = 'Gibbs',control = list(seed = 1111)) 
+
+
+homework_beta<-tidy(lda_model, matrix = "beta") 
+
+topic1<-homework_beta%>% group_by(topic) %>%  top_n(10, beta) %>%filter(topic==1)
+topic2<-homework_beta%>% group_by(topic) %>%  top_n(10, beta) %>%filter(topic==2)
+topic3<-homework_beta%>% group_by(topic) %>%  top_n(10, beta) %>%filter(topic==3)
+topic4<-homework_beta%>% group_by(topic) %>%  top_n(10, beta) %>%filter(topic==4)
+topic5<-homework_beta%>% group_by(topic) %>%  top_n(10, beta) %>%filter(topic==5)
+topic6<-homework_beta%>% group_by(topic) %>%  top_n(10, beta) %>%filter(topic==6)
+
+
+topic1
+
+topic2
+
+topic3
+
+topic4
+
+topic5
+
+topic6
+
+
+problem1_related <- tidy(lda_model, matrix = "gamma")  %>%   filter(document == 'P1')
+
+print(problem1_related)  # related to topic1
+
+problem2_related <- tidy(lda_model, matrix = "gamma")  %>%   filter(document == 'P2')
+
+problem2_related #related to 3 6
+
+problem3_realted<-tidy(lda_model, matrix = "gamma")  %>%   filter(document =='P3')
+
+problem3_realted #related to 1
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+

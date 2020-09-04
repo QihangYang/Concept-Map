@@ -1,0 +1,491 @@
+﻿Problem Set ID,Problem text,Related Concept
+lr_gu_LR_p1.1,"1.1 Which of the following models are linear in the parameters, or variables, or both. Which of these models are LRMs?
+a.
+Yi = B1 + B2 (1/Xi) +ui (Reciprocal)
+b.
+Yi = B1 + B2 ln Xi +ui (Semilogarithmic)
+c.
+ln Yi = B1 + B2 Xi +ui (Inverse semilogarithmic)
+d.
+ln Yi = B1 + B2 ln Xi +ui (Double logarithmic)
+e. ln Yi = B1 + B2 (1/Xi) +ui (Logarithmic reciprocal)
+Note: = natural log and ui is the regression error term.",Simple Linear Regression
+lr_gu_LR_p1.2,"1.2 Are the following models LRMs? Why or why not?
+a.
+Yi=eB1+B2Xi+ui
+b.
+Yi=11+eB1+B2Xi+ui
+c.
+lnYi=B1+B2(1/Xi)+ui
+d.
+Yi=B1+(0.75−B1)e−B2(Xi−2)+ui
+e.
+Yi=B1+B23Xi+ui",Simple Linear Regression
+lr_gu_LR_p1.3,"1.3 Consider the following regression model that has no explanatory variables.
+Yi = B1+ ui
+a.
+Use OLS to estimate B1.
+b.
+How would you interpret B1 in this model?","Simple Linear Regression, Estimation"
+lr_gu_LR_p1.4,"1.4 Consider the following simple two-variable, or bivariate, regression model.
+Yi = B1+ B2 Xi + ui
+a.
+Using OLS, obtain the estimators of B1 and B2.
+b.
+How would you interpret the two regression coefficients?","Simple Linear Regression, Estimation"
+lr_gu_LR_p1.5,"1.5
+Prove: rY^Y2=R2, that is, the squared correlation coefficient between the actual Y and
+the estimated Y from a regression model is equal to the coefficient of determination.","Simple Linear Regression, Estimation, Prediction, Remedy"
+lr_gu_LR_p1.6,Let Byx be the slope coefficient in the regression of Y on X and BXY the slope coefficient in the regression of X on Y. Show that BYX BXY = r2.,"Simple Linear Regression, Estiamtion, Remedy"
+lr_gu_LR_p1.7,"Show that ¯
+X=1′x/n. Similarly, show that ¯
+Y=1′y/n. Show that nΣ1Xi=1′x, where 1′ = (1, 1, . . . , 1)′ and x is an n-element column vector",Linear Algebra
+lr_gu_LR_p1.8,"Prove the following in inequality, known as the Cauchy–Schwarz inequality:
+[E(XY)]2 ≤ E(X2)E(Y2)
+Use this inequality to show that r 2, the squared correlation coefficient, is such that 0 ≤ r2 ≤ 1.","Linear Algebra, Remedy"
+lr_gu_LR_p1.9,"Show that
+a.
+¯e=0, that is, the average value of the residuals is zero.
+b.
+¯Y=b1+b2¯X2+b3¯X3+?+bk¯Xk, that is, the regression hyperplane passes through the sample mean values of Y and the Xs.
+c.
+The mean value of actual Y and estimated Y values are the same.","Multiple Linear Regression, Estimation, Prediction"
+lr_gu_LR_p1.10,"Consider the following regression model: Yik=B1+B2Xi+uiY>0,k=aconstant
+Consider the following values for k
+k = 1, 2, 0.5, −0.5, −1
+a.
+For each of these k values, find the corresponding regression model. Which of these models are LRMs?
+b.
+Suppose k = 0. Can you estimate the regression model in this case?10","Generalized Linear Regression, Estimation"
+lr_gu_LR_p1.11,"You are given 10 values for variables Y (the dependent variable) and X (the explanatory variable):
+Y 70 65 90 95 110 115 120 140 155 150
+X 80 100 120 140 160 180 200 220 240 260
+Based on these values, estimate the following regression:
+Yi=B1+B2Xi+uii=1,2,…,10
+a.
+Find (X′X),(X′Y)
+b.
+Estimate b=(X′X)-1 X′Y.
+c.
+Estimate R 2 for this example.","Simple Linear Regression, Estimation"
+lr_gu_LR_p2.1,"Consider the bivariate regression: Yi = B1 + B2Xi +ui. Under the classical linear regression assumptions, show that a. cov(b1, b2) = − ¯ X σ 2 Σ(Xi − ¯ X) 2 b. cov( ¯ Y, b2) = 0","Simple Linear Regression, Estimation"
+lr_gu_LR_p2.2,"Show that for the model in Exercise 2.1,
+RSS =
+Σxi
+2
+Σyi
+2
+− (Σxiyi
+)
+2
+Σxi
+2
+where RSS is the residual sum of squares and
+xi = (Xi −
+¯
+X); yi = (Yi −
+¯
+Y); xiyi = (Xi −
+¯
+X)(Yi −
+¯
+Y)","Simple Linear Regression, Estimation"
+lr_gu_LR_p2.3,"Verify the following properties of OLS estimators:
+a. The OLS regression line (plane) passes through the sample means of the
+regressand and the regressors.
+b. The mean values of the actual Y and the estimated Y( = ŷ) are the same.
+c. In the CLRM with intercept, the mean value of the residuals (ē) is zero.
+d. As a result of the preceding property, the k-variable sample CLRM can be
+expressed as yi = b2x2i + b3x3i + ? + bkxk
+i
++ ei
+where
+yi = (Yi −
+¯
+Y); xki = (Xki −
+¯
+Xk)","Simple Linear Regression Estimation, Prediction"
+lr_gu_LR_p2.4,"Consider the following bivariate regression model:
+Yi
+*
+= B1
+*
++ B2
+*Xi
+*
++ ui
+where
+Yi
+*
+=
+Yi −
+¯
+Y
+sY
+; Xi
+*
+=
+Xi −
+¯
+X
+sX
+where sY and sX are the sample standard deviations of Y and X. Yi
+*
+and Xi
+*
+are known
+as standardized variables, often known as Z scores. Since the units of measurement of
+the Z scores in the numerator and the denominator are the same, they are called “pure”
+or “unitless” numbers.
+Show that a standardized variable has a zero mean and unit variance.
+What are the formulas to estimate B1
+*
+and B2
+*
+?
+What is the relationship between B1
+*
+and B1 and between B2
+*
+and B2? ","Simple Linear Regression, Estimation"
+lr_gu_LR_p2.5,"The sample correlation coefficient between variables Y and X, rXY, is defined as
+rXY =
+Σxiyi
+√Σxi
+2
+Σyi
+2
+where
+xi = (Xi −
+¯
+X); yi = (Yi −
+¯
+Y)
+If we standardize variables as in Exercise 2.4, does it affect the correlation coefficient
+between X and Y? Show the necessary calculations. ","Simple Linear Regression, Estimation, Remedy"
+lr_gu_LR_p2.6,"Consider variables X1, X2, and X3. Now consider the following correlation coefficients:
+r12 = correlation coefficient betweenX1andX2
+r13 = correlation coefficient betweenX1andX3
+r23 = correlation coefficient betweenX2andX3
+r12.3 =
+r12 − r13r23
+√1 − r
+13
+2
+√1 − r
+23
+2
+
+r12.3 is called the partial correlation coefficient between X1 and X2 holding the
+influence of the variable X3. The concept of partial correlation is akin to the concept of a
+partial regression coefficient.
+a. What other partial correlation coefficients can you compute?
+b. If we standardize the three variables as in Exercise 2.4, would the
+correlation coefficients among the standardized variables be different from
+the unstandardized variables?
+c. Would partial correlation coefficients be affected by standardizing the
+variables? Explain. ","Simple Linear Regression, Estimaion"
+lr_gu_LR_p2.7,"Consider the following LRM:
+Yi = B1 + B2X2
+i
++ B3X3i + B4X4i + B5X5i + ui
+How would you test the following hypotheses?
+a. B2 = B3 = B4 = B5 = B, that is, all partial regression coefficients
+are the same.
+b. B2
+= B3
+and B4
+= B5
+c. B2 + B3 = 2B4","Multiple Linear Regression, Estimation, Remedy"
+lr_gu_LR_p2.8,"Remember that the hat matrix, H, is expressed as
+H = X(X ′ X)
+− 1X
+Show that the residual vector e can also be expressed as
+e=(I−H)y ","Multiple Linear Regression, Estimation"
+lr_gu_LR_p2.9,Prove that the matrices H and (I − H) are idempotent. ,Linear Algebra
+lr_gu_LR_p2.10,"For the following matrix, compute its eigenvalues:
+[
+1
+0
+0
+0
+1
+0
+0
+0
+1 ]",Linear Algebra
+lr_gu_LR_p2.11,"Consider the following regression model (see Chapter 7, Equation (7.30)):
+Yi = B1 + B2Xi + B3Xi
+2
++ ui
+Models like this are called polynomial regression models, here a second-degree
+polynomial.
+a. Is this an LRM?
+b. Can OLS be used to estimate the parameters of this model?
+c. Since Xi
+2
+is the square of Xi
+, does this model suffer from perfect collinearity? ",Generalized Linear Regression
+lr_gu_LR_p2.12,"Consider the following model:
+Yi = B1 + B2X2
+i
++ B3X3i + B4X4i + ui
+You are told that B2 = 1.
+a. In this case, is it legitimate to estimate the following regression?
+Yi = B1 + B2X2i + B3X3i + B4X4i + ui
+This model is called a restricted linear regression, whereas the preceding
+model is called an unrestricted linear regression (see Chapter 4,
+Appendix 4A for further details).
+b. How would you estimate the restricted regression, taking into account the
+restriction that B2 = 1? ","Multiple Linear Regression, Estimation"
+lr_gu_LR_p3.1,"Consider the binomial variable x discussed in the chapter.
+a. If a random sample of n observations is drawn from this PDF, what is the
+ML estimator of p and the variance of its sampling distribution?
+b. What is the asymptotic variance of the ML estimator found in (b)?
+c. *Does ^
+p the estimator of p, attain the CRLB for the variance of an
+unbiased estimator? ",Estimation
+lr_gu_LR_p3.2,"A random variable x is said to follow the Poisson distribution if it has the following density
+function:
+f(x; λ) =
+λ
+x
+e
+− λ
+x!
+, λ > 0, x = 0, 1, 2, …
+where λ is the parameter of the distribution. A sample of size n is drawn randomly from
+this distribution.
+a. Obtain the likelihood function for the sample.
+b. Estimate the parameter λ. How would you interpret it?
+c. What is the variance of this distribution?
+d. Does it attain the CRLB? ",Probability Distribution
+lr_gu_LR_p3.3,"X1,X2,…,Xn is a random sample from N(λ,1).
+a. What is the ML estimator of λ
+b. Let γ = e
+λ
+. What is the ML estimator of γ? (Hint: Invariance property of
+ML estimator.) ",Estimation
+lr_gu_LR_p4.1,"In the classical bivariate LRM,
+Yi = B1 + B2Xi + ui
+Show that
+a.
+cov(b1, b2) = −
+¯
+X(
+σ
+2
+Σx
+i
+2)
+and
+b. cov(
+¯
+Y, b1) = 0
+where
+xi = (Xi −
+¯
+X).","Estimation, Linear Algebra"
+lr_gu_LR_p4.2,"In the bivariate regression model of Exercise 4.1, show that
+E(MESS) = σ
+2
++ b2Σx1
+2
+, and
+E(MRSS) = σ
+2
+where MESS = mean or average explained sum of squares and MRSS =
+mean or average residual sum of squares. (Hint: Refer to Table 4.2.) ","Probability Distribution, Estimation"
+lr_gu_LR_p4.3,"Consider the data in Tables 1 and 2 below:
+Table 1
+Y X2 X3
+1 2 4
+2 0 2
+3 4 12
+4 6 0
+5 8 16
+Table 2
+Y X2 X3
+1 2 4
+2 0 2
+3 4 0
+4 6 12
+5 8 16
+The only difference between the two tables is that the third and fourth values of X3 are
+interchanged.
+a. Estimate the two regressions.
+b. What conclusions do you draw from this exercise?
+c. What may be the reason for the difference between the two regressions? ","Multiple Linear Regression, Estimation"
+lr_gu_LR_p4.4,"Suppose in the model
+Yi = B1 + B2X2i + B3X3i + ui
+r23 the coefficient of correlation between X2 and X3 is zero. Therefore, someone
+suggests that you estimate the following regressions:
+Yi = C1 + C2X2i + u1i
+Yi = D1 + D3X3i + u2i
+a. Willc2 = b2 and d3 = b3? Why?
+b. Will b1 equal to c1 or d1, or some combination thereof?
+c. Will var(b2) = var(c2) and var(b3) = var(d3)? Explain. ","Multiple Linear Regression, Simple Linear Regression, Hypothesis Testing"
+lr_gu_LR_p4.5,"Suppose that X1,X2,…,Xn is a random sample from N(θ,1) The ML estimator of γ is
+γ =
+¯
+X.
+What is the ML estimator of T = e
+γ
+?(Hint: Consistency property of ML estimators.) ","Estimation, Probability Distirbution"
+lr_gu_LR_p4.6,"Suppose that X1,X2,…,Xn is a random sample from N(γ,σ2
+). The ML estimator of θ is
+^
+θ =
+¯
+X.
+Let
+˜
+θ,
+the sample median, be an alternative estimator of θ. It can be shown that the ML
+estimator satisfies10
+√n(θn − θ) ~ N(0, σ
+2
+) (i.e., asymptotic normality)
+It can also be shown that the median satisfies
+√n(
+˜
+θ − θ) ~ N(
+0, σ
+2π
+2 )
+That is, it is also asymptotically normally distributed with the stated parameters.
+Since both the estimators converge to the right value, what is the difference between the two? Which is
+relatively more efficient? What is the practical importance of this finding? ","Probaility Distribution, Estimation"
+lr_gu_LR_p5.1,"Consider the following model:15
+Yi = BXi + ui
+, i = 1, 2
+where u1 ~ N(0, σ
+2
+) and u2 ~ N(0, 2σ
+2
+), and they are statistically independent. If X1 =
++1and X2 = –1, obtain
+a. the weighted least-squares estimate of B.
+b. the variance of the estimate. ","Simple Linear Regression, Estimation"
+lr_gu_LR_p5.2,"Let Z = c+Dy, where y is a random vector, D is a fixed matrix, and c is a fixed vector.
+Show that
+a. E(Z) = c+D E(y)
+and
+b. cov(Z) = DΣyyD
+′
+where
+Σyy
+is the covariance of y. ","Probability Distribution, Linear Algebra"
+lr_gu_LR_p5.3,"Consider the following model without the intercept:
+Yi = BXi + ui
+You are told that var(ui
+) = σ
+2Xi
+2
+. Show that   var(B) =
+σ
+2
+ΣXi
+4
+(ΣXi
+2
+)
+2",Probability Distribution
+lr_gu_LR_p5.4,"Which of the following statements are true or false?
+a. In regression analysis, the assumption that the error term u is normally
+distributed is essential to validate the use of F and t tests.
+b. H0: B1 = B2B3 is not a linear hypothesis.
+c. The formula
+E(b) = B + (X ′ X)
+−
+1X ′ X2B2
+gives the bias effect on b of failing to include the terms X2B2 in the model. ","Probability Distribution, Hypothesis Testing"
+lr_gu_LR_p5.5,"Suppose in the hypothetical savings–income regression discussed in the text, the error ui
+has the following error variance structure:
+E(ui
+2
+) = σ
+2Xi
+That is, the error variance is proportional to the level of income X. How would you transform the
+savings–income regression so that in the transformed model the error variance is homoscedastic? ","Hypothesis Testing, Probability Distribution"
+lr_gu_LR_p7.1,"Using the lin-log model of (7.26), we obtained the following regression results:
+Yi = 0.9304 − 0.0777lnXi
+t = (25.5836)( − 21.6482) R
+2
+= 0.3508
+where Y = share of food expenditure in total expenditure and X = total expenditure. The
+results are based on the data for 869 U.S. households in 1995.
+a. How would you interpret this regression?
+b. What is the interpretation of the slope coefficient of about −0.08?
+c. How would you compute the elasticity of the share of food expenditure in
+relation to the total expenditure?
+(Hint : Elasticity =
+dY
+dX
+X
+Y
+)","Generalized Linear Regression, Estimation"
+lr_gu_LR_p7.2,"Using the same data as in Exercise 7.1, we estimated the reciprocal model as in Equation
+(7.29) and obtained the following results:
+Yi = 0.0772+1331.3380(
+1
+Xi)
+t = (19.2595)(20.8161) R
+2
+= 0.3332
+a. How would you interpret this regression?
+b. What is the interpretation of the slope coefficient?
+c. Is the rate of change in the food expenditure in relation to total expenditure
+positive or negative throughout?
+d. What would be the share of food expenditure in the total expenditure if the
+total expenditure were to increase indefinitely? (Hint: the intercept) ","Generalized Linear Regression, Estimation, Hypothesis Testing"
+lr_gu_LR_p7.3,"Suppose instead of estimating the quadratic trend model (7.31), we estimate the model
+without the quadratic term. The results are as follows:
+RGDPt = 1664.2180 + 186.9939timet
+t = (12.6078) + (39.8717) R
+2
+= 0.9718
+This model is known as the linear trend model.
+a. How would you interpret this regression?
+b. Between the quadratic trend model of Equation (7.32) and the linear trend
+model, which would you choose? And why?
+c. If the quadratic trend model is the “true” model, what type of specification
+error is involved if you use the linear trend model? ",Generalized Linear Regression
+lr_gu_LR_p7.4,"In the wage regression results given in Table 4.1, the dependent variable was w, hourly
+wage rate in dollars. Suppose now we regress the log of the wage rate on the regressors
+given in Table 4.1. The results of this regression are given in the following table (Note:
+LW = natural log of W). In this regression, as in the results given in Table 4.1, FE (female),
+NW (nonwhite), and UN (union) are qualitative or dummy variables; ED (education in
+years) and EX (experience in years) are quantitative variables. The results of “log wage
+regression” are as follows:
+Dependent Variable: LW
+Method: Least Squares
+Date: 02/25/17 Time: 17:55
+Sample: 1 1289
+Included observations: 1289
+Variable Coefficient Std. Error t-Statistic Prob.
+C 0.905504 0.074175 12.20768 0.0000
+FE −0.249154 0.026625 −9.357891 0.0000
+NW −0.133535 0.037182 −3.591399 0.0003
+UN 0.180204 0.036955 4.876316 0.0000
+ED 0.099870 0.004812 20.75244 0.0000
+EX 0.012760 0.001172 10.88907 0.0000
+R-squared 0.345650 Mean dependent var 2.342416
+Adjusted R-squared 0.343100 S.D. dependent var 0.586356
+S.E. of regression 0.475237 Akaike info criterion 1.354639
+Sum squared resid 289.7663 Schwarz criterion 1.378666
+Log likelihood −867.0651 Hannan-Quinn criter. 1.363658
+F-statistic 135.5452 Durbin-Watson stat 1.942506
+Prob(F-statistic) 0.000000
+a. How would you interpret these results?
+b. Are the signs of the various coefficients in accord with prior expectations?
+c. What is the semielasticity of the wage rate with respect to education? And
+with respect to years of experience?
+d. Is it possible to compute the wage elasticity with respect to the dummy
+variables?28
+e. Is the R
+2
+value given in the preceding table comparable with the R
+2
+value
+given in Table 4.1? Why or why not? ","Multiple Linear Regression, Estiamtion, Remedy"

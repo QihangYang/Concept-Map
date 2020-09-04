@@ -1,0 +1,326 @@
+STAT GR5241 Sample Midterm
+
+Name:
+
+UNI:
+
+Students are allowed two pages of handwritten notes (front and back). Calculators are allowed and will be useful. Tablets, phones, computers and other equivalent forms of technology are strictly prohibited. Students are not allowed to communicate with their neighbors during the exam. Please have your student ID available. Cheating will result in a score of zero. Good luck!
+
+Note: there are several topics that could also show up on the midterm. It is impossible to assess everything covered in lecture.
+
+Problem 1: LDA [20 pts]
+Consider the LDA classifier using two continuous features x1 and x2 and a single dichotomous response. In this case for constants a > 0 and b > 0, let the true means, true pooled covariance matrix, and the true prior probabilities equal:
+
+0 µ1 = 0
+
+b µ2 = 0
+
+= a 0 0a
+
+1 1 = 2 = 2
+
+1.i Derive the linear decision boundary in terms of query point xT = x1 x2 and constants a, b. Note that your solution should be intuitive based on the location of means µ1 and µ2. Show all of your work to receive full credit.
+
+1
+
+2
+
+1.ii Using a = 1 and b = 4, draw the LDA decision boundary below. 3
+
+Problem 2: QDA [25 pts]
+Note: you must choose problem 2 or problem 3 but not both. Clearly state the problem that you choose to solve.
+Consider the QDA classifier using two continuous features x1 and x2 and a single dichotomous response. In this case for constants a > 0 and b > 0, let the true means, the true covariance matrices, and the true prior probabilities equal:
+
+0 µ1 = 0
+
+b µ2 = 0
+
+a0 1 = 0 a
+
+2a 0 2 = 0 2a
+
+1 1 = 2 = 2
+
+2.i Derive the QDA decision boundary in terms of query point xT = x1 x2 and constants a, b. Show all of your work to receive full credit.
+
+4
+
+5
+
+2.ii Using a = 1 and b = 4, draw the QDA decision boundary below. 6
+
+Problem 3: PCA [25 pts] Note: you must choose problem 2 or problem 3 but not both. Clearly state the problem that you choose to solve. Consider a random vector X  Rp with mean E[X] = 0 and variance-covariance matrix Cov[X] = . Note that  is a p × p dimensional matrix. Denote the jth eigenvalue and jth eigenvector of  as j and j, respectively. Define the random score vector Z as
+Z = T X,
+where  is the rotation matrix with its columns being the eigenvectors j, i.e.,
+ = 1 | 2 | · · · | p
+
+Perform the following task: Show that the variance-covariance matrix of random score vector Z is
+
+
+
+
+
+1 0 · · · 0
+
+0
+
+Z
+
+=
+
+  
+
+...
+
+2 · · · ... . . .
+
+0
+
+
+
+...
+
+ 
+
+
+
+
+
+0 0 · · · p
+
+7
+
+8
+
+9
+
+Problem 4: Regression [30 pts]
+Consider regressing y against x. The following toy dataset is the training data in this application. The scatter plot of this dataset is displayed on the next page.
+
+Case x y 1 0.24 1.38 2 0.28 1.47 3 0.28 1.21 4 0.28 1.06 5 0.37 1.23 6 0.40 1.59 7 0.57 1.38 8 1.02 1.98 9 1.05 1.79
+10 1.22 1.74 11 1.44 1.80 12 1.45 2.07 13 1.53 1.96 14 1.58 1.55 15 1.65 1.66 16 2.18 1.73 17 2.21 1.69 18 2.32 1.61 19 2.34 1.85 20 2.71 1.62 21 2.80 1.25 22 2.92 1.23 23 3.06 1.07 24 3.12 1.00 25 3.32 0.73
+
+Case x
+
+y
+
+26 3.88 0.13 27 4.04 0.44 28 4.10 0.26 29 4.16 0.38 30 4.20 0.10 31 4.35 0.33 32 4.42 -0.22 33 4.47 -0.19 34 4.49 0.15 35 4.49 -0.02 36 4.64 -0.13 37 4.98 -0.34 38 4.99 0.30 39 5.10 0.49 40 5.11 -0.27 41 5.20 -0.17 42 5.23 0.13 43 5.30 0.61 44 5.40 0.16 45 5.47 0.31 46 5.58 0.47 47 5.62 0.07 48 5.67 0.05 49 5.82 0.52
+
+Also note that:
+
+n = 49 x¯ = 3.2051 y¯ = 0.8410
+
+10
+
+Perform the following tasks:
+4.i Estimate the line of best fit using the least squares equation, i.e., compute y^ = ^0 + ^1x. Use the following quantities in your calculation:
+
+(XT X)-1 = 0.0835 -0.0197 -0.0196 0.006
+
+XT Y = 41.2109 76.7277
+
+11
+
+4.ii Using the estimated linear regression model y^ = ^0+^1x, predict y using test case xtest = 1.9. 4.iii Now apply the k-NN model to predict y using test case xtest = 1.9. More specifically, predict
+y using a 1-NN regression, 5-NN regression, and 49-NN regression at xtest = 1.9.
+12
+
+4.iv Rank each model in terms of bias, variance and test error at test case xtest = 1.9. Rank the models using 1,2,3,4, where 1 is the smallest and 4 is the largest. If you feel that some ranks are impossible to determine, you can assign ties, e.g., 2.5 or 3.5. Write a few sentences to justify your rankings in the space below. Model Bias Variance Test Error Linear regression 1-NN 5 -NN 49-NN Model Bias Variance Test Error Linear regression 1-NN 5 -NN 49-NN
+13
+
+Problem 5: kNN Classification and Logistic Regression [25 pts]
+Consider classifying the dichotomous response Y using kNN classification and logistic regression. The full dataset includes two continuous features X1 and X2. The training dataset is displayed below. The variable D is the Euclidian distance of each training case against a single test case xtest = .53 .74 .
+
+X1 X2 Y
+
+D
+
+1 -2.07 1.48 G1 2.70
+
+2 1.49 -0.36 G1 1.46
+
+3 0.73 -0.34 G1 1.10
+
+4 0.32 -0.32 G1 1.08
+
+5 0.13 -1.38 G1 2.15
+
+6 0.20 -1.26 G1 2.03
+
+7 -1.03 0.13 G1 1.67
+
+8 -0.74 -0.92 G1 2.08
+
+9 0.76 1.00 G1 0.34
+
+10 -2.50 0.89 G1 3.04
+
+11 -0.39 0.16 G1 1.09
+
+12 -2.58 1.63 G1 3.23
+
+13 -2.14 1.39 G1 2.75
+
+14 0.37 0.87 G1 0.21
+
+15 -1.29 1.64 G1 2.04
+
+16 2.52 0.04 G2 2.11
+
+17 -0.05 0.17 G2 0.81
+
+18 0.99 0.18 G2 0.73
+
+19 1.50 0.36 G2 1.04
+
+20 1.21 -0.51 G2 1.42
+
+21 2.16 0.20 G2 1.72
+
+22 0.66 1.36 G2 0.63
+
+23 2.19 -0.70 G2 2.19
+
+24 0.43 -0.81 G2 1.55
+
+25 0.73 0.26 G2 0.51
+
+26 0.13 1.20 G2 0.61
+
+27 3.19 0.99 G2 2.67
+
+28 1.52 0.04 G2 1.22
+
+29 2.50 -0.73 G2 2.46
+
+30 2.46 0.79 G2 1.93
+
+14
+
+Perform the following tasks: 4.i Use a 5-NN classification model to predict class label Y based on query point (or test case) xtest = .53 .74 . You should be able to solve this problem based on the training data and distances from the previous page. Plot both the query point xtest and its 5 nearest neighbors on the below scatterplot.
+15
+
+4.ii Use a logistic regression model to predict class label Y based on query point (or test case) xtest = .53 .74 . You should be able to solve this problem based on the trained logistic model summarized in the R output below. Note that the response variable is defined as
+
+1 Y=
+0
+
+if G1 if G2
+
+Also note that we classify Y = 1 using threshold .5. R Summary Output
+
+(Intercept) X1 X2
+
+Estimate 1.1414 -1.9606 -0.7481
+
+Std. Error 0.7020 0.7203 0.7085
+
+z value 1.63 -2.72 -1.06
+
+Pr(>|z|) 0.1039 0.0065 0.2910
+
+4.iii Identify the equation of the linear decision boundary using threshold .5. This equation should be in terms of x1 and x2. Plot this linear decision boundary on the below scatterplot. Similarly, identify and plot the linear decision boundary using threshold .2. The scatterplot is on the next page.
+16
+
+17
+
+4.iv Below shows two different confusion matrices based on respective thresholds .2 and .5. Clearly identify what points on the ROC curve these two thresholds produce. Just circle the points on the ROC curve after computing the true positive and false positive rates. You must show the basic calculations to receive full credit.
+Please note that the two points based on confusion matrices below should exist on the ROC curve but the plot constructed below is incorrect. If a similar question shows up on the midterm, there won't be a mistake.
+
+Table 1: Threshold .2
+
+Y = G1 Y = G2
+
+Y^ = G1
+
+14
+
+7
+
+Y^ = G2
+
+1
+
+8
+
+Table 2: Threshold .5
+
+Y = G1 Y = G2
+
+Y^ = G1
+
+11
+
+2
+
+Y^ = G2
+
+4
+
+13
+
+18
+
+4.v Consider training a polynomial logistic regression model. Here we assume Y1, . . . , Yn are independent Bernoulli random variables with success probability pi. The link function is then expresses as
+
+log
+
+pi 1 - pi
+
+= 0 + 1xi1 + 2x2i1 + 3xi2 + 4x2i2.
+
+Briefly describe the decision boundary produced from this model, i.e., what is its mathematical form? Also describe potential negative impacts on prediction by training a logistic model with higher order polynomial terms.
+
+19
+
+Useful relations:
+
+I will include any useful mathematics relations that you might not have written on your equation sheet.
+
+1. For random vector X  Rp, its mean vector µ and variance-covariance matrix  are respec-
+
+tively defined by
+
+ E[X1]
+
+µ
+
+=
+
+E[X]
+
+=
+
+E[X2]
+
+ 
+
+...
+
+ 
+
+
+
+E[Xp]
+
+and  = E[(X - E[X])(X - E[X])T ]
+
+2. For matrices A and B, (AB)T = BT AT .
+3. Let A be a matrix with column vectors a1, a2, . . . , ap, i.e., A = a1 | a2 | · · · | ap
+Then for matrix B, the matrix product BA can be written as BA = Ba1 | Ba2 | · · · | Bap
+
+4. Let A be the (2 × 2) matrix The determinate of A is: The inverse of A is:
+
+A= a b cd
+
+det(A) = ad - bc
+
+A-1 = 1
+
+d -b
+
+ad - bc -c a
+
+20
+
+

@@ -1,0 +1,418 @@
+A
+Final Exam GU4241/GR5241 Spring 2018
+Name
+UNI
+
+Problem 0: UNI (2 points)
+Write your name and UNI on the first page of the problem sheet. After the exam, please return the problem sheet to us.
+
+Problem 1: Short questions (3+3+4+8 points) Short answers (about one sentence) are sufficient.
+
+(a) What is the difference between bagging and random forests?
+(b) Describe the procedure for computing the out of bag error from Bagging a regression tree.
+(c) Assume that f is a convex function. G = {x : g(x)  0} is a convex set. For the constrained optimization problem:
+
+min subject to
+
+f (x) g(x)  0,
+
+the KKT conditions are:
+
+f (x) = -g(x) g(x) = 0
+g(x)  0 0
+
+What is the purpose of each condition? Could you briefly explain the meaning of them?
+
+Solution:
+
+(a) In each case, we average the result of decision trees fit to many Bootstrap samples. However, in a Random Forest we restrict the number of variables to consider in each split. This produces a greater diversity of decision trees or weak learners, which reduces the variance of the averaged prediction.
+
+(b) For each sample xi, consider all the Bootstrap samples that do not contain xi and average the predictions
+
+for the response yi made by the corresponding trees; call the average y^ioob. Then, the out of bag error is
+
+given by:
+
+1 n
+
+n
+(yi - y^ioob)2.
+
+i=1
+
+(c) The first condition is the optimal criterion. If  = 0, this is the criterion for achieving the minimum in the interior of G. If  > 0, this means the directions of f and g are opposite, which is the optimal criterion for achieving the minimum at the bounday of G.
+The second condition distinguishes the cases when the minimum is achieved in the interior and at the boundary of G.
+The third condition is the contraint of the problem.
+The last one requires that f cannot flip to orientation of g.
+
+1
+
+(d) Assume that y is a binary response, y  {-1, 1}. f (x) is our classifier. The following are the loss functions that are frequently used in machine learning: 0 yf (x) > 0 · 0-1 Loss: L01(y, f (x)) = 1 yf (x)  0. · Hinge Loss (used in SVM): Lh(y, f (x)) = max{0, 1 - yf (x)}. · Square Loss: Lsq(y, f (x)) = (1 - yf (x))2. · Exponential Loss ( used in boosting): Lexp(y, f (x)) = exp(-yf (x)). · Binomial Deviance (used in logistic regression): Lbi(y, f (x)) = log (1 + exp(-yf (x))). The plot of these loss functions are shown in the figure below:
+· These loss functions can be thought of as convex approximation to the 0-1 loss function. Looking at the plot, which one appears intuitively to be the worst approximation to the 0-1 loss function? Which one appears to be the best?
+· Consider just the 0-1 loss, the hinge loss, and the exponential loss. Rank the loss functions from highest to lowest in terms of robustness to misspecification of class labels in the data. Hint: consider the amount of loss assigned to a point z that is large and negative; this point corresponds to a large margin error ( or a misspecification).
+Solution: (d) · The squared error loss is the worst approximation, while the hinge loss is the best. · Exponential loss is the least robust one, and 0-1 loss is the most robust one.
+2
+
+Problem 2: Neural Networks(10 points) Assume that we fit a single layer hidden neural network in a regression problem on Rp. Recall our model is:
+Zm = (0m + m T X), m = 1, . . . , M. fk(X) = 0k + kT Z, k = 1, . . . , K.
+
+The parameters of the model are  = {0m, m, 0k, k} (each m is a p-dimensional vector and k is an M -dimensional vector. We use gradient descent to minimize the squared error loss
+
+nK
+
+R() =
+
+(yik - fk(xi))2.
+
+i=1 k=1
+
+A gradient update at the (r + 1)st iteration has the form
+
+k(rm+1)
+
+=
+
+k(rm)
+
+-
+
+R k(rm) ,
+
+m (r+l 1)
+
+=
+
+m (r)l
+
+-
+
+R m (r)l .
+
+An issue of neural networks is that they have too many weights and will overfit the data. Therefore, regularization is necessary. Instead of minimizing the emprical risk R(), we add a penalty J() to it with the form
+
+J () = k2m + m 2 l.
+
+k,m
+
+m,l
+
+Now the object function of the optimization problem becomes
+
+R() + J().
+
+Write
+
+down
+
+the
+
+gradient
+
+update for
+
+this
+
+regularized
+
+problem.
+
+(You
+
+DO
+
+NOT
+
+NEED
+
+to
+
+calculate
+
+R  km
+
+and
+
+R  ml
+
+)
+
+Solution:
+
+k(rm+1)
+
+=
+
+k(rm) -
+
+R  k(rm)
+
++ 2k(rm)
+
+,
+
+m (r+l 1)
+
+=
+
+m (r)l -
+
+R  m (r)l
+
++
+
+2m (r)l
+
+.
+
+3
+
+Problem 3: Classification Trees(10 points)
+We have some data about when people go hiking. The data take into effect, whether hike is on a weekend or not, if the weather is rainy or sunny, and if the person will have company during the hike. Find the optimum decision tree for hiking habits, using the training data below. When you split the decision tree at each node, maximize the drop of impurity by using the entropy as the impurity measure, i.e.,
+
+maximize [I(D) - (I(DL) + I(DR))]
+
+where D is parent node, and DL and DR are two child nodes, and I(D) is:
+
+m+
+
+m-
+
+I(D) = mH( ) = mH( )
+
+m
+
+m
+
+and H(x) = -x log2 x - (1 - x) log2(1 - x), 0  x  1, is the entropy function and m = m+ + m- with m+ and m- being the total number of positive and negative cases at the node.
+
+You may find the following useful in your calculations: H(x) = H(1 - x), H(0) = 0, H(1/5) = 0.72, H(1/4) = 0.8, H(1/3) = 0.92, H(2/5) = 0.97, H(3/7) = 0.99, H(0.5) = 1.
+
+Weekend? Y Y Y Y Y Y Y Y N N N
+
+Company? N Y Y Y N N Y Y Y Y N
+
+Weather R R R S S S R S S R S
+
+Go Hiking ? N N Y Y Y N N Y N N N
+
+(a) Build a decision tree of depth 3. Draw your decision tree.
+(b) According to your decision tree, what is the probability of going to hike on a rainy week day, without any company?
+(c) How about the probability of going to hike on a rainy weekend when having some company?
+
+Solution:
+(a) We ant to choose attributes that maximize mH(p) - mlH(pl) - mr(H(pr), where p, pl, and pr are the fraction of positive cases in parent nodes and two child nodes, and m, ml, and mr are the total number of points in parent node and two child nodes. This means that at each step, we need to choose the predictor for which mrH(pr) + mlH(pl) is minimum. For the first step, the predictor Weekend achieve this:
+· Weekend: mrH(pr) + mlH(pl) = 8H(1/2) + 3H(0) = 8 · Weather : mrH(pr) + mlH(pl) = 5H(1/5) + 6H(1/2)  9.6 · Company : mrH(pr) + mlH(pl) = 4H(1/4) + 7H(3/7)  10.1
+Therefore the first split is on Weekend. If Weekend = N, then the probability of going hiking is 0. If weekend = Y, we need to choose the second predictor to split on:
+· Weather : mrH(pr) + mlH(pl) = 4H(1/4) + 4H(1/4)  6.4 · Company : mrH(pr) + mlH(pl) = 5H(2/5) + 3H(1/3)  7.6
+
+4
+
+Therefore, the second split will be on Weather, and the third one will be Company. The decision tree is as follows:
+(b) Based on the decision tree, the probability is 0. (c) The probability is 1/3.
+5
+
+PTthhreoebtfhloeilcmlkowl4iinn:egDipseictcthiuserioedsne,cbwisohiouicnnhdbwaorueinehdsaav(re1y 0adlooelptsooeeoroienmntoisooinn)oeoo·ooo·odcoooooooloooooaooboooooo··sooyoooooooosooooo·oooo,otooooooooooohsoooooohoeoooooooooooooooooooooooocooooooooooowoooo·ooooloooo·ooooaooooooooootsooooohsoooioeoooofiooooooo·ooe·oooooorouooo;otoypoouoo·o·out ocofanseivgenroarledtiffheerednatshceladssliinfieesr.s. ................................................................................ ................................................................................TTB................................................................................rea................................................................................asy................................................................................itne................................................................................ E................................................................................isn................................................................................rgE................................................................................ro................................................................................rEr................................................................................ro:................................................................................rrr................................................................................o:................................................................................r................................................................................:................................................................................000................................................................................ ..................................................................................122................................................................................ 841................................................................................ 050................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................ ................................................................................
+
+Recall that
+
+SVM - Radial Kernel in Feature Space
+
+Random Forest Classifier
+
+o·o·oooo·ooo oo o·oo·oo·ooooooo·oooo·ooooooo·oooooooo·oooooooo·ooooo·ooooo·oooooo·ooooooooooooooooooooooo·oooooooooo·oooooooooooooo·ooooooooooooo·oooooooooooo·o·oooo·oooooooooooooo·oo·oooooooooooooooooo·o·oooo·oo·ooo·o·o o ooo·oo· o ................................................................................................... ...................................................................................................TTB...................................................................................................rea...................................................................................................asy...................................................................................................itne................................................................................................... E...................................................................................................isn...................................................................................................rgE...................................................................................................ro...................................................................................................rEr...................................................................................................ro:...................................................................................................rrr...................................................................................................o:................................................................................................... r...................................................................................................:...................................................................................................000................................................................................................... .....................................................................................................122................................................................................................... 611................................................................................................... 080................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ................................................................................................... ...................................................................................................
+
+ooTToreoasooiotnEoionrgorooEroo:oororooooroo:ooooo00ooo..ooooo02ooooooooo03ooooooo08oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+oooo o
+
+o
+
+Bayes Error: 0.210
+
+o
+
+3-N
+
+o oo o o
+
+ooooo o
+
+oo o o
+
+o
+
+o
+
+oo o
+
+oooooooooo
+
+o
+
+o
+
+o o
+
+Training Error: 0.
+Test Error: 0. Bayes Error: 0.
+
+(a)
+
+(b)
+
+(c)
+
+FIGURE 12.3. Two nonlinear SVMs for the mix-
+
+For each of the three picturetsu:re data. The upper plot uses a 4th degree polynomial
+FIGURE 15.11. Random forests ver
+
+· Name at least one classifier which could have produced this solutiomn.ixExtpularien wdhay.ta. The axis-oriented natur
+
+· Name at least one classifier which could not have produced the souluatioln.trEexeplsainiwnhyanotr.andom forest lead to
+
+Solution:
+
+with an axis-oriented flavor.
+
+could be generated by reason
+could not be generated by reason
+
+(a) logistic regression or LDA linear boundary, class overlap K-nearest-neighbor classifier Trees or RF (smooth slope)
+
+(b) Bayes classifier smooth, non-linear boundary any linear classifier Trees or RF (smooth)
+
+(c) random forests non-linear boundary any linear classifier
+
+6
+
+Problem 5: Decision Trees(10 points) The standard method for fitting a decision tree involves:
+· Growing the tree split by split. We maximize the reduction of the training error at each step until there are at most 5 samples per region.
+· Pruning the tree to obtain a sequence of trees of decreasing size. · Selecting the optimal size by cross-validation. Consider the following alternative approach. Grow the tree split by split until the reduction in the training error produced by the next split is smaller than some threshold. This approach may lead to bad results because it is possible to make a split which does not decrease the error by much, and then make a second split which reduces the error significantly. Draw an example dataset where this happens with two predictors X1 and X2, and a binary categorical response. Solution: The figure shows the partition produced by a tree with 2 splits. The first split (horizontal line) barely reduces the classification error. However, the second split (vertical line) decreases the error significantly.
+7
+
+Problem 6: The Kernel Trick(10 points)
+
+In this problem, we will apply the kernel trick to ridge regression and derive kernel ridge regression.
+
+Consider a linear regression problem with n data points each in p dimensions, corresponding to the data matrix
+
+X  Rn×(p+1) and response vector y  Rn. Just as we extended a linear SVM to a nonlinear SVM with the
+
+kernel trick, we can do the same to create nonlinear kernel regression. Specifically, we want to find the solution
+
+to:
+n
+
+arg min
+
+
+(yi -
+
+, (xi) F )2 + 
+
+
+
+2 F
+
+,
+
+i=1
+
+where (·) is the feature map and ·, · F = k(·, ·) in the usual "kernel trick" way.
+
+A very important property of the solution is that  can be written in the form  =
+
+n i=1
+
+i(xi)
+
+=
+
+T 
+
+with
+
+ = [(x1) · · · (xn)]T (this general fact in often called the representation theorem).
+
+Then, using this property, write how to predict f^(x) and a new point x. Your prediction f (x) should be in
+
+terms of the kernel matrix K = { (xi), (xj) F }i,j=1,...,n, and elements in F should not appeaer explicitly in this prediction (since that could be infinite dimensional).
+
+Solution: Assume that  = [(x1), . . . , (xn)]T is the feature matrix, where  is the feature map.
+
+n
+
+(yi -
+
+, (xi) F )2 + 
+
+
+
+2 F
+
+=
+
+i=1
+
+y - , T
+
+2 2
+
++
+
+
+
+
+
+2 F
+
+=
+
+y - T , T
+
+2 2
+
++
+
+
+
+T 
+
+2 F
+
+= yT y - 2T T y + T T T  + T T 
+
+= yT y - 2T Ky + T (K2 + K)
+
+Taking derivative, we have
+
+2Ky = 2K(K + I).
+
+Therefore, the solution is
+
+KRR = (K + I)-1y,
+
+which has the same form as the ridge regression solution in the original space. Then we have KRR = T KRR, and thus:
+
+f (x) = , (x) F
+
+= T , (x) F
+
+k(x, x1)
+
+= 
+
+...
+
+ (K + I)-1y. 
+
+k(x, xn)
+
+8
+
+Problem 7: Missing Data(10 points) Assume you are given a data set consisting of variables having more than 30% missing values? Let's say, out of 50 variables, 8 variables have missing values higher than 30%. How will you deal with them? List at least two approaches. Solution:
+(a) We can replace the missing values by the mean of each variable. (b) We can impute the missing values by running a regression on the other varibles. (c) We can view this as a matrix completion problem, and use the low rank approximation as our data matrix.
+9
+
+

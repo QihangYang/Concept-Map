@@ -1,0 +1,334 @@
+Stat 4207/5207 Spring 2019 Final 5/13/2019 9am - 12pm Time Limit: 3 Hours
+
+Name: UNI:
+
+This exam contains 15 pages (including this cover page) and 7 questions. You may use 3 pages of notes, double sided, and a calculator. You may not use a computer, or a device which gives you internet access or texting capabilities.
+Instructions: Do any 4 problems. Each counts 25 points. If you attempt more than 4 problems, only 4 will be graded. Thus, please clearly indicate which ones to grade by writing down or circling the 4 problem numbers on the first page of the exam.
+
+Grade Table Question Points Score
+
+1
+
+25
+
+2
+
+25
+
+3
+
+25
+
+4
+
+25
+
+5
+
+25
+
+6
+
+25
+
+7
+
+25
+
+Total: 100
+
+Stat 4207/5207
+
+Final - Page 2 of 15
+
+5/13/2019 9am - 12pm
+
+1. (25 points) Let {X(t) : t 0} be a standard Brownian motion. (a) (5 points) Use Doob's inequality to obtain an upper bound on
+
+P sup X2(s) 5 .
+0s2
+
+(b) (5 points) Find the probability that {X(t) : t 0} has 1 or more zeros in the interval (1.5, 2).
+
+Stat 4207/5207
+
+Final - Page 3 of 15
+
+5/13/2019 9am - 12pm
+
+(c) (5 points) Let Ta be the first time that the process hits a. Find P (T-2 < T1 < T-3).
+
+(d) (5 points) Find P (X(2) + 3X(1) > 4|X(3) = 2.7). (e) (5 points) Find E[(X(5) - X(2))4].
+
+Stat 4207/5207
+
+Final - Page 4 of 15
+
+5/13/2019 9am - 12pm
+
+2. (25 points) Suppose that {Yn} is an iid sequence of exponential random variables with  = 3.
+
+(a) (5 points) Define Zn =
+
+3+ 
+
+n e-Sn, where Sn =
+
+n i=1
+
+Yi
+
+and  > 0.
+
+Show that
+
+{Zn} is a martingale with respect to the filtration Fn = (Y1, . . . , Yn).
+
+(b) (5 points) Define W1 < W2 < · · · < Wn to be the order statistics corresponding to Y1, . . . , Yn. For n = 5, find P (W1 + W2 + W3 > 1).
+
+Stat 4207/5207
+
+Final - Page 5 of 15
+
+(c) (5 points) Find P (max(Y1, Y2) < min(Y3, Y4)).
+
+5/13/2019 9am - 12pm
+
+(d) (5 points) Find P (S3 < 0.7S6), where S3 =
+
+3 i=1
+
+Yi
+
+and
+
+S6
+
+=
+
+6 i=1
+
+Yi.
+
+(e) (5 points) Define N = min{k :
+
+k i=1
+
+Yi
+
+>
+
+2}
+
+and
+
+SN
+
+=
+
+P (N = 4, SN < 2.3).
+
+N i=1
+
+Yi
+
+.
+
+Find
+
+Stat 4207/5207
+
+Final - Page 6 of 15
+
+5/13/2019 9am - 12pm
+
+3. (25 points) A factory has 3 machines and 2 repairmen. The machines independently have exponential failure times with  = 2. The repair times are independent exponentially distributed random variable with repair rate µ = 3. If 3 machines are simultaneously out of order, then 2 are receiving repair and the other is waiting to start repair. Define X(t) to be the number of working machines at time t. Thus, X(t) takes values in {0, 1, 2, 3}.
+(a) (5 points) Write down the Q matrix for the process {X(t) : t 0}.
+
+(b) (5 points) Find the stationary distribution of this process.
+
+Stat 4207/5207
+
+Final - Page 7 of 15
+
+5/13/2019 9am - 12pm
+
+(c) (5 points) Let Y (t) be the number of busy repairmen at time t (Y (t) can be 0,1 or 2). Find limt P (Y (t) = 2).
+
+(d) (5 points) Suppose that X(t0) = 1. Find the waiting time from t0 until the first time after t0 that both servers are simultaneously busy.
+
+(e) (5 points) Find limt
+
+1 t
+
+t 0
+
+X
+
+2(s)ds
+
+.
+
+Stat 4207/5207
+
+Final - Page 8 of 15
+
+5/13/2019 9am - 12pm
+
+4. (25 points) A die is rolled until the 1st 4 appears. Let N be the number of rolls required.
+
+For example, if we observe 1,3,6,5,5,2,3,4, then N = 8. Define Sn =
+
+n i=1
+
+Xi,
+
+where
+
+Xi
+
+is the outcome of the ith roll.
+
+(a) (5 points) Find E[SN |N ] and Var(SN |N ).
+
+(b) (5 points) Find VarSN .
+
+(c) (5 points) Find ESN .
+
+Stat 4207/5207
+
+Final - Page 9 of 15
+
+5/13/2019 9am - 12pm
+
+(d) (5 points) Define M = min{k : Sk 20}. Use Wald's identity to get a 2-sided bound for EM . (Hint: ESM = EXEM and SM  {20, 21, 22, 23, 24, 25}.)
+
+(e) (5 points) If {X(t) : t 0} be a standard Brownian motion, find E(sup1 s 3 X(s)).
+
+Stat 4207/5207
+
+Final - Page 10 of 15
+
+5/13/2019 9am - 12pm
+
+5. (25 points) Consider 2 independent Markov chains {Xn, n = 0, 1, . . . } and {Yn, n =
+
+0, 1, . . . }, both with state space {1, 2, 3}. The Markov chains {Xn} has X0 = 2 and
+
+transition matrix
+
+0.5 0.5 0 
+
+PX =  0 0.5 0.5 ,
+
+0.5 0 0.5
+
+while Y0 = 1 and
+
+0 0 1 PY =  1 0 0  .
+0.4 0.3 0.3
+
+(a) (5 points) Define T = min{k 1 : Xk = 2, Yk = 1} (the first return to the starting state (2, 1) for the bivariate Markov chian {(Xn, Yn), n 0}). Find ET .
+
+(b) (5 points) Find limn P (Xn = Yn).
+
+Stat 4207/5207
+
+Final - Page 11 of 15
+
+5/13/2019 9am - 12pm
+
+(c) (5 points) For the {Yn} chain, find the probability that starting in state 3, state 1 is visited before state 2.
+
+(d) (5 points) For the {Xn} chain, find ET1,3, the expected waiting time starting in state 1 to visit state 3 for the first time.
+
+(e) (5 points) For the {Xn} chain, find lim P (Xn+1 = 3, X2n-1 = 1|X0 = 2).
+n
+
+Stat 4207/5207
+
+Final - Page 12 of 15
+
+5/13/2019 9am - 12pm
+
+6. (25 points) Let {Xn} be a branching process with Z  Bin(3, 0.5) and X0 = 1. (a) (5 points) Compute limn P (Xn 1).
+
+(b) (5 points) Compute P (X3 1).
+
+Stat 4207/5207
+
+Final - Page 13 of 15
+
+(c) (5 points) Find P (X2 = 3).
+
+5/13/2019 9am - 12pm
+
+(d) (5 points) Find Var[E(X5|X3)].
+
+(e) (5 points) Find P (X2 1, X3 = 0).
+
+Stat 4207/5207
+
+Final - Page 14 of 15
+
+5/13/2019 9am - 12pm
+
+7. (25 points) Suppose that {Ni(t), t 0}, i = 1, 2, 3. are independent Poisson processes,
+
+with 1 = 2, 2 = 3, 3 = 5. Define {N (t) =
+
+3 i=1
+
+Ni(t),
+
+t
+
+0}, the superposition of the
+
+3 processes.
+
+(a) (5 points) Find the pdf of S5, the 5th event from the process {N1(t), t 0}.
+
+(b) (5 points) Let Tm denote the arrival time of the mth event in the superimposed
+
+process {N (t), t
+
+0}. Find Var[
+
+N (2) k=1
+
+Tk
+
+].
+
+Stat 4207/5207
+
+Final - Page 15 of 15
+
+(c) (5 points) Find P (N1(5) = 1|N (5) = 4).
+
+5/13/2019 9am - 12pm
+
+(d) (5 points) Define Uk to be the time of the kth event from the process {N2(t), t 0}.
+
+Find
+
+E(
+
+U3 S5
+
+).
+
+(Recall
+
+S5
+
+from
+
+part
+
+(a))
+
+(e) (5 points) Find P (U3 > S2), where U3 is the 3rd event from {N2(t), t 0} and S2 is the 2nd event from {N1(t), t 0}.
+
+

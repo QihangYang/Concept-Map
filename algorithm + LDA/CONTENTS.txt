@@ -1,0 +1,14 @@
+Contents
+
+Tesseract_test: 
+	How to install Tesseract
+	Code of converting image to text
+	Other kinds of OCR
+	A short example of one hot encoding
+
+Algorithm: 
+	A complete precedure	
+	OCR and LDA
+	Functions: find shortest path, distance between questions, find similar questions
+
+The .py file contains only the code in .ipynb file 

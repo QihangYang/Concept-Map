@@ -1,0 +1,302 @@
+Stat 4207/5207 Fall 2017 Final 12/18/2017 Time Limit: 3 Hours
+
+Name: UNI:
+
+This exam contains 13 pages (including this cover page) and 6 questions. Total of points is 100.
+You may use 3 pages of notes, double sided, and a calculator. You may not use a computer, or device which gives you internet access or texting capabilities.
+Instructions: Do any 4 problems. (Please write down the 4 problem numbers on the first page of the blue book.) Each counts 25 points.
+
+Grade Table (for teacher use only) Question Points Score
+
+1
+
+25
+
+2
+
+25
+
+3
+
+25
+
+4
+
+25
+
+5
+
+25
+
+6
+
+25
+
+Total: 100
+
+Stat 4207/5207
+
+Final - Page 2 of 13
+
+1. (25 points) Let {X(t), t  0} be standard Brownian motion. Find, (a) (5 points) P (X(3) - X(1) > 3|X(4) - X(2) = 4).
+
+12/18/2017
+
+(b) (5 points) P (sup(X(t) - 3t) > 1).
+t0
+
+Stat 4207/5207
+
+Final - Page 3 of 13
+
+12/18/2017
+
+(c) (5 points) P (T2 > 1) where T2 = min{t : X(t) = 2}, the first passage time to the point 2.
+
+(d) (5 points) P ( sup X(t) > 2|X(1) = 1).
+1t2
+(e) (5 points) Define T2 to the first time that {X(t) + t, t  0} visits the point 2 (T2 = min{t : X(t) + t = 2}). Find the mean and variance of T2.
+
+Stat 4207/5207
+
+Final - Page 4 of 13
+
+12/18/2017
+
+2. (25 points) Consider an M/M/2 queueing system with waiting room capacity 2. Thus when 4 customers are in the system, 2 being served and 2 waiting for service, then any arriving customers are turned away and lost to the system. Assume that the arrival rate  equals 2, and the service rate µ equals 4.
+(a) (8 points) Find the long run proportion of arriving customers who are turned away.
+
+(b) (8 points) Find the long run proportion of time that both servers are simultaneously busy.
+
+Stat 4207/5207
+
+Final - Page 5 of 13
+
+12/18/2017
+
+(c) (9 points) Let X(t) be the number of customers in the system at time t. Find ET2,3 where T2,3 = min{t : X(t) = 3|X(0) = 2} the waiting time starting in state 2 to reach state 3 for the first time.
+
+Stat 4207/5207
+
+Final - Page 6 of 13
+
+12/18/2017
+
+3. (25 points) A fair die is rolled until the first even outcome is obtained. Let N equal the
+
+number of rolls required. For example, if we observe (3, 3, 1, 5, 3, 3, 5, 1, 6), then N = 9.
+
+Define Sn =
+
+n i=1
+
+Xi,
+
+n
+
+=
+
+1,
+
+2,
+
+·
+
+·
+
+·
+
+.
+
+(a) (6 points) Find E(SN |N ).
+
+(b) (6 points) Find E(SN ), both by Wald's identity and by using (a).
+
+Stat 4207/5207
+
+Final - Page 7 of 13
+
+(c) (7 points) Find V ar(SN ).
+
+12/18/2017
+
+(d) (6 points) Find Cov(N, SN ).
+
+Stat 4207/5207
+
+Final - Page 8 of 13
+
+12/18/2017
+
+4. (25 points) Suppose that {N (t), t  0} is a Poisson process with  = 3, and that Sk is the time of k-th event, k = 1, 2, · · · . Find,
+
+(a)
+
+(5
+
+points)
+
+P
+
+(
+
+S4 S2
+
+> 2).
+
+(b)
+
+(5
+
+points)
+
+E
+
+(
+
+1 S2
+
+).
+
+Stat 4207/5207
+
+Final - Page 9 of 13
+
+(c) (5 points) E(N (3)|N (4) - N (2) = 3).
+
+12/18/2017
+
+(d) (5 points) Let {Yi} be i.i.d Uniform(0, 1) random variables. Find the variance of
+N (4)
+Yi.
+i=N (2)+1
+(e) (5 points) Now suppose that {N (t), t  0} is a Poisson process with  = 2, with {N (t), t  0} and {N (t), t  0} independent. Denote by Sr, the r-th event from this N Poisson process. Find, P (S3 < S5).
+
+Stat 4207/5207
+
+Final - Page 10 of 13
+
+12/18/2017
+
+5. (25 points) Consider a Markov chain with state space {0, 1, 2, 3} and transition matrix,
+
+0123
+
+0 0 0.4 0.4 0.2 
+
+P=
+
+1 0.5 2 0.5
+
+0 0.3
+
+0.1 0
+
+0.4 
+
+0.2
+
+ 
+
+3 0 0.3 0.5 0.2
+
+(a) (6 points) For A = {1, 2}, find P (TA > 2|X0 = 3), where Xn is the state at time n, and the TA is the first passage time to A.
+
+(b) (6 points) Find, E3TA the expected first passage time to A, starting at time 0 in state 3.
+
+Stat 4207/5207
+
+Final - Page 11 of 13
+
+12/18/2017
+
+(c)
+
+(6
+
+points)
+
+Given
+
+X0 = 1, find
+
+lim (
+n
+
+N2(n) n
+
+),
+
+where N2(n) = {# visits to
+
+state 2 dur-
+
+ing times {1, 2, · · · , n}}.
+
+(d)
+
+(7 points)
+
+Find
+
+lim [
+n
+
+1 n
+
+ni=1 (X (i))3 ]
+
+Stat 4207/5207
+
+Final - Page 12 of 13
+
+12/18/2017
+
+6. (25 points) Consider a branching process {X(n), n = 0, 1, · · · } with X(0) = 1, and offspring distribution Z distributed as Bin(3, p).
+(a) (6 points) For what values of p is lim P (X(n) = 0) < 1? n
+
+(b)
+
+(6 points)
+
+Find
+
+the
+
+extinction
+
+probability,
+
+(0),
+
+when
+
+p=
+
+1 2
+
+.
+
+Stat 4207/5207
+
+Final - Page 13 of 13
+
+(c) (7 points) Find, P (X(2) = 2), as a function of p.
+
+12/18/2017
+
+(d)
+
+(6 points)
+
+Find,
+
+E[X(10)|X(6) = 7], when
+
+p=
+
+1 2
+
+.
+
+

@@ -1,0 +1,252 @@
+W 4207/5207 Spring 2020 Final Exam 05/11/2020 Time Limit: 180 Minutes
+
+Name: UNI:
+
+This exam contains 8 pages (including this cover page) and 7 questions. Total of points is 100
+
+Instructions: Do any 4 problems. If you do more than 4, only 4 will be graded. If you do more than 4, clearly indicate the problems you want graded in the table at the end of this page.
+You may use your notes, textbook, and calculator. Work alone without assistance from anyone else either in person, by telephone or by email. Do not use a computer, except to receive and hand in the exam.
+Each problem has 5 parts, each worth 5 points, thus each problem is worth 25 points.
+Upload your submission to Courseworks (within the "Assignments" section) before 12:15. Please note that Courseworks will only allow submissions in PDF format. Do not email the solution to the Professor nor the TAs.
+Grade Table
+Question Points Score
+
+25
+
+25
+
+25
+
+25
+
+Total 100
+
+W 4207/5207
+
+Final Exam - Page 2 of 8
+
+05/11/2020
+
+1. (25 points) A fair die is rolled until the first even outcome, (2, 4, 6), is obtained. Let N equal the number of rolls required. For example, if we observe (1, 3, 3, 1, 5, 1, 5, 3, 6, . . . ), then N = 9. Find
+(a) (5 points) E (N |SN = 9) (b) (5 points) E (0.8)N (c) (5 points) E (SN |N ) (d) (5 points) E(SN ) (e) (5 points) Var(SN )
+
+W 4207/5207
+
+Final Exam - Page 3 of 8
+
+05/11/2020
+
+2. (25 points) Consider {Xi, i  i} iid Exponential(2), {Yi, i  i} iid Exponential(3),
+
+{N1(t), t  0} a Poisson process with intensity 1, and {N2(t), t  0} a Poisson pro-
+
+cess with intensity 2. Assume that {Xi}, {Yi}, {N1(t), t  0} and {N2(t), t  0} are
+
+independent. Define
+
+N1(t)
+
+N2(t)
+
+W1(t) = Xi, W2(t) = Yi,
+
+i=1
+
+i=1
+
+{N (t) = N1(t) + N2(t), t  0}, {W (t) = W1(t) + W2(t), t  0}
+
+(a) (5 points) Is {W (t), t  0} a compound Poisson Process? Why or why not?
+
+(b) (5 points) Find P (W1(3) > W2(3)|N1(3) = 2, N2(3) = 3)
+
+(c) (5 points) Define M = {min k :
+
+k i=1
+
+Xi
+
+>
+
+3}.
+
+Find
+
+E
+
+M i=1
+
+Xi
+
+(d) (5 points) Define T3 to be the time of the 3rd event for the process {N (t), t  0} defined above. Find P (T3 > 1.5)
+(e) (5 points) Let N  Bin(10, 0.3) with N independent of {Yi}. Find,
+
+E min Yi 1iN +1
+
+W 4207/5207
+
+Final Exam - Page 4 of 8
+
+05/11/2020
+
+3. (25 points) Consider a standard Brownian motion process {X(t), t  0}. Find (a) (5 points) P (X(1) < 1 + X(3)).
+
+(b) (5 points) Var sup X(t) .
+2t5
+
+(c) (5 points) Let Y denote the first zero for the Brownian motion process after time
+
+t = 5. Find P (Y > 8).
+
+(d)
+
+(5 points) Define thus T = {inf : X~
+
+X~ (t) (t) =
+
+= 3X(t) + 2}. Find
+
+2t. the
+
+Let T mean
+
+denote the first and variance of
+
+time T.
+
+that
+
+X~ (t)
+
+=
+
+ 2,
+
+t
+
+(e) (5 points) Find
+
+P
+
+X12
+
++ (X2
+
+- X1)2 X12
+
++ (X3 + (X2
+
+- X2)2 - X1)2
+
++ (X4
+
+- X3)2
+
+>
+
+2
+
+W 4207/5207
+
+Final Exam - Page 5 of 8
+
+05/11/2020
+
+4. (25 points) Consider a Markov chain with state space {0, 1, 2, 3} and transition matrix
+0123 00 0 0 1 P= 1 0 0 1 0 2 1/4 1/4 1/4 1/4 30 1 0 0
+(a) (5 points) Find lim E (X(k))X(k) |X(0) = 2 k
+(b) (5 points) Define A = {1, 3}. Find the expected number of steps to go from 2 to A for the first time, that is find, ET2,A = E minXk  A|X(0) = 2
+k
+(c) (5 points) Find P (visit 0 before 3|X(0) = 2) (d) (5 points) Find P 4 (0, 0) = P (X(4) = 0|X(0) = 0) (e) (5 points) Find lim P (Xn+1 = 1, X2n = 2|X(0) = 3)
+n
+
+W 4207/5207
+
+Final Exam - Page 6 of 8
+
+05/11/2020
+
+5. (25 points)
+
+(a) (5 points) Consider a continuous time Markov chain with state space {0, 1, 2} and
+
+infinitesimal matrix
+
+012
+
+Q=
+
+0 1
+
+-4 3
+
+2 -4
+
+2 1
+
+2 3 1 -4
+
+Find an explicit expression for
+
+P0(1t) = P (X(t) = 1|X(0) = 0)
+
+(b) (5 points) A factory has 2 machines and 2 repairmen. The operating time of a machine is exponential with mean 1 hour. The repair time of a machine is exponential with mean 15 minutes. A busy period begins when 1 of 2 working machines fail and ends the next time instant that both are working. Find the expected length of a busy period.
+
+(c) (5 points) We have 6 balls distributed among 2 urns, A and B. At each stage one of the urns is randomly chosen. If the chosen urn is non-empty then one of its balls is moved to the other urn. Otherwise, we do nothing. Find the long term proportion of time that one of the urns is empty.
+
+(d) (5 points) Consider a continuous time MC with state space S = {1, 2, 3} and in-
+
+finitesimal matrix
+
+-3 1 2 
+
+Q =  2 -4 2 
+
+1 4 -5
+
+Find the stationary distribution.
+
+(e) (5 points) In (d), find P (reach 2 before 1|X0 = 3)
+
+W 4207/5207
+
+Final Exam - Page 7 of 8
+
+05/11/2020
+
+6. (25 points) Consider a branching process with offspring distribution Z  Bin(3, 0.7). Let Xn denote the population at time n, with X0 = 1. Find, (a) (5 points) P (X1 = 2|X2 = 5) (b) (5 points) P (X2 = 0|X3 = 0) (c) (5 points) Var (X4|X2 = 3) (d) (5 points) lim P (Xn = 0)
+n
+(e) (5 points) P (X4  1|X3  1)
+
+W 4207/5207
+
+Final Exam - Page 8 of 8
+
+05/11/2020
+
+7. (25 points)
+(a) (5 points) Consider 3 independent Poisson process with respective intensities 1, 2, 3. Define W to be the first time that all 3 processes each have at least one event occurring. Thus W = min{t : Ni(t)  1, i = 1, 2, 3}. Find E(W )
+(b) (5 points) Consider a Markov chain with 0123
+01 0 0 0 P = 1 0.3 0.5 0.2 0
+2 0 0.2 0.3 0.5 30 0 0 1 Find the probability that starting in state 1, that the chain eventually gets absorbed into state 3.
+(c) (5 points) Claims arrive to an insurance company according to a Poisson process with rate  = 5 claims per day. The claim sizes are iid with pdf
+f (x) = (0.003)2xe-0.003x, x > 0
+
+Find the probability that there will be at least 4 claims of size $1000 or greater over a 3 day period
+(d) (5 points) Suppose that X, Y, Z are independent exponential random variables with E(X) = 1, E(Y ) = 2 and E(Z) = 3 (Thus X  Expo(1), Y  Expo(1/2), Z  Expo(1/3). Find 1 E 6X + 3Y + 2Z
+
+(e) (5 points) Consider a M/G/ queue in which service times have pdf,
+
+f (x) =
+
+1 2
+
+,
+
+0,
+
+0<x<2 elsewhere
+
+The arrivals are from a Poisson process with  = 5. Find the distribution of the number of customers in service at time 3, who arrived to the system during 2.1 < t < 2.7
+
+

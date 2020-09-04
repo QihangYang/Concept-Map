@@ -1,0 +1,521 @@
+Problem,Content,Concept
+LR_DO_ch5_P13,"This problem uses data from Kuehl (1994, p. 128).
+a) Get lregdata and lregpack into R. Type the following commands. Then simultaneously press the Ctrl and c keys. In Word use the menu command “Paste.” Print out the figure.
+  y <- ycrab+1/6
+  aovtplt(crabhab,y)
+b) From the figure, what response transformation should be used: Y = √√
+1/Z,Y =1/ Z,Y =log(Z),Y = Z,orY =Z?
+
+","Computational Statistics, Generalized Linear Regression"
+LR_DO_ch5_P14,"The following data set considers the number of warp breaks per loom, where the factor is tension (low, medium, or high).
+a) Copy and paste the commands for this problem into R.
+Highlight the ANOVA table by pressing the left mouse key and dragging the cursor over the ANOVA table. Then use the menu commands “Edit> Copy.” Enter Word and use the menu command “Paste.” b) To place the residual plot in Word, get into R and click on the plot, hit the Ctrl and c keys at the same time. Enter Word and use the menu command “Paste” or hit the Ctrl and v keys at the same time.
+c) Copy and paste the commands for this part into R.
+Click on the response plot, hit the Ctrl and c keys at the same time. Enter Word and use the menu command “Paste.”
+","Computational Statistics, Hypothesis Testing"
+LR_DO_ch5_P15,"Obtain the Box et al. (2005, p. 134) blood coagulation data from lregdata and the R program ganova from lregpack. The program does graph- ical Anova for the one way Anova model.
+a) Enter the following command and include the plot in Word by simulta- neously pressing the Ctrl and c keys, then using the menu command “Paste” in Word, or hit the Ctrl and v keys at the same time.","Computational Statistics, Hypothesis Testing"
+LR_DO_ch5_P16,"5.17. To get in ARC, you need to find the ARC icon. Suppose the ARC icon is in a math progs folder. Move the cursor to the math progs folder, click the right mouse button twice, move the cursor to ARC, double click, move the cursor to ARC, double click. These menu commands will be written “math progs > ARC > ARC.” To quit ARC, move cursor to the x in the northeast corner and click.
+This Cook and Weisberg (1999a, p. 289) data set contains IQ scores on 27 pairs of identical twins, one raised by foster parents IQf and the other by biological parents IQb. C gives the social class of the biological parents: C = 1 for upper class, 2 for middle class and 3 for lower class. Hence the Anova test is for whether mean IQ depends on class.
+a) Activate twins.lsp dataset with the menu commands “File > Load > Data > twins.lsp.”
+b) Use the menu commands “Twins>Make factors,” select C and click on OK. The line “{F}C Factor 27 Factor–first level dropped” should appear on the screen.
+c) Use the menu commands “Twins>Description” to see a description of the data.
+d) Enter the menu commands “Graph&Fit>Fit linear LS” and select {F}C as the term and IQb as the response. Highlight the output by pressing the left mouse key and dragging the cursor over the output. Then use the menu commands “Edit> Copy.” Enter Word and use the menu command “Paste.”
+5.7 Problems 211 e) Enter the menu commands “Graph&Fit>Boxplot of” and enter IQb in
+the selection box and C in the Condition on box. Click on OK. When the boxplots appear, click on the Show Anova box. Click on the plot, hit the Ctrl and c keys at the same time. Enter Word and use the menu command “Paste.” Include the output in Word. Notice that the regression and Anova F statistic and p-value are the same.
+f) Residual plot: Enter the menu commands “Graph&Fit>Plot of,” select “L1:Fit-Values” for the “H” box and “L1:Residuals” for the “V” box, and click on “OK.” Click on the plot, hit the Ctrl and c keys at the same time. Enter Word and use the menu command “Paste.”
+g) Response plot: Enter the menu commands “Graph&Fit>Plot of,” select “L1:Fit-Values” for the “H” box and “IQb” for the “V” box, and click on “OK.” When the plot appears, move the OLS slider bar to 1 to add the identity line. Click on the plot, hit the Ctrl and c keys at the same time. Enter Word and use the menu command “Paste.”
+h) Perform the 4 step test for Ho: μ1 = μ2 = μ3.","Computational Statistics, Hypothesis Testing"
+LR_DO_ch5_P17,"This McKenzie and Goldman (1999, p. T-234) data set has 30 three-month- old infants randomized into five groups of 6 each. Each infant is shown a mobile of one of five multicolored designs, and the goal of the study is to see if the infant attention span varies with type of design of mobile. The times that each infant spent watching the mobile are recorded.
+b) Choose “Stat>Basic Statistics>Display Descriptive Statistics,” select “C1 Time” as the “Variable,” click the “By variable” option and press Tab. Select “C2 Design” as the “By variable.” c) From the window in b), click on “Graphs” the “Boxplots of data” option, and “OK” twice. Click on the plot and then click on the printer icon to get a plot of the boxplots.
+d) Select “Stat>ANOVA>One-way,” select “C1-time” as the response and “C2-Design” as the factor. Click on “Store residuals” and click on “Store fits.” Then click on “OK.” Click on the output and then click on the printer icon.
+e) To make a residual plot, select “Graph>Plot.” Select “Resi1” for “Y” and “Fits1” for “X” and click on “OK.” Click on the plot and then click on the printer icon to get the residual plot.
+f) To make a response plot, select “Graph>Plot.” Select “C1 Time” for “Y” and “Fits1” for “X” and click on “OK.” Click on the plot and then click on the printer icon to get the response plot.
+g)Dothe4steptestforHo:μ1 =μ2 =···=μ5.
+To get out of Minitab, move your cursor to the “x” in the NE corner of the screen. When asked whether to save changes, click on “no.”",Hypothesis Testing
+LR_DO_ch6_P1,". The above output uses data from Kutner et al. (2005, prob- lems 19.16–17). A study measured the number of minutes to complete a repair job at a large dealership. The two explanatory variables were “A = technician” and “B = make of drive.” The output is given above.
+a) Give a four step test for no interaction.
+b) Give a four step test for the B main effects.",Hypothesis Testing
+LR_DO_ch6_P2,"Suppose A has 5 levels and B has 4 levels. Sketch an interaction plot if there is no interaction.
+Two Way Anova in SAS
+InSAS,Y =A|BisequivalenttoY =A B A∗B.ThustheSASmodel statement could be written in either of the following two forms.
+
+","Hypothesis Testing, Computational Statistics, Diagnostic"
+LR_DO_ch6_P3,"Cut and paste the SAS program from (http://lagrange.math.siu.edu/Olive/lreghw.txt) for 6.3 into the SAS Editor.
+To execute the program, use the top menu commands “Run>Submit.” An output window will appear if successful. The data is from Montgomery (1984, p. 198) and gives the maximum output voltage for a typical type of storage battery. The two factors are material (1,2,3) and temperature (50, 65, 80◦F).a) Copy and paste the SAS program into SAS, use the file command “Run>Submit.”
+b) Click on the “Graph1” window and scroll down to the second interaction plot of “tmp” vs “ymn.” Press the printer icon to get the plot.
+c) Is interaction present?
+d) Click on the output window then click on the printer icon. This will produce 5 pages of output, but only hand in the ANOVA table, response plot, and residual plots.
+(Cutting and pasting the output into Word resulted in bad plots. Using Notepad gave better plots, but the printer would not easily put the ANOVA table and two plots on one page each.)
+e) Do the residual and response plots look ok?
+
+","Hypothesis Testing, Computational Statistics, Diagnostic"
+LR_DO_ch6_P4,"a) Copy the SAS data for problem 6.3 into Notepad. Then hit “Enter”
+every three numbers so that the data is in 3 columns.b) Copy and paste the data into Minitab using the menu commands Edit>Paste Cells and click on “OK.” Right below C1 type “material,” below C2 type “temp” and below C3 type “mvoltage.”
+c) Select Stat>ANOVA>Two-way, select “C3 mvoltage” as the response and “C1 material” as the row factor and “C2 temp” as the column factor. Click on “Store residuals” and click on “Store fits.” Then click on “OK.” Click on the output and then click on the printer icon.
+d) To make a residual plot, select Graph>Plot. Select “Resi1” for “Y” and “Fits1” for “X” and click on “OK.” Click on the printer icon to get a plot of the graph.
+e) To make a response plot, select Graph>Plot. Select “C3 mvoltage” for “Y” and “Fits1” for “X” and click on “OK.” Click on the printer icon to get a plot of the graph.
+f) Use the menu commands “Stat>ANOVA>Interaction Plots.” Enter mvoltage in the “Responses” box and material and temp in the “Factors” box. Click on “OK” and print the plot.","Hypothesis Testing, Computational Statistics, Diagnostic"
+LR_DO_ch6_P5,"The Box et al. (2005, p. 318) poison data has 4 types of treatments (1,2,3,4) and 3 types of poisons (1,2,3). Each animal is given a poison and a treatment, and the response is survival in hours. Get the poison data from lregdata.
+a) Type the following commands to see that the output for the three models is the same. Print the output.
+  out1<-aov(stime~ptype*treat,poison)
+  summary(out1)
+  out2<-aov(stime~ptype + treat + ptype*treat,poison)
+  summary(out2)
+  out3<-aov(stime~.^2,poison)
+  summary(out3)
+  #The three models are the same.
+b) Type the following commands to see the residual plot. Include the plot in Word.
+  plot(fitted(out1),resid(out1))
+  title(""Residual Plot"")
+c) Type the following commands to see the response plot. Include the plot in Word.
+6.5 Problems 225
+  FIT <- poison$stime - out1$resid
+  plot(FIT,poison$stime)
+  abline(0,1)
+  title(""Response Plot"")
+d) Why is the two way Anova model inappropriate?
+e) Now the response Y = 1/stime will be used. Type the following com- mands to get the output. Copy the output into Word.
+  attach(poison)
+  out4 <- aov((1/stime)~ptype*treat,poison)
+  summary(out4)
+f) Type the following commands to get the residual plot. Copy the plot into Word.
+  plot(fitted(out4),resid(out4))
+  title(""Residual Plot"")
+g) Type the following commands to get the response plot. Copy the plot into Word.
+  FIT <- 1/poison$stime - out4$resid
+  plot(FIT,(1/poison$stime))
+  abline(0,1)
+  title(""Response Plot"")
+h) Type the following commands to get the interaction plot. Copy the plot into Word.
+  interaction.plot(treat,ptype,(1/stime))
+  detach(poison)
+i) Test whether there is an interaction using the output from e).","Hypothesis Testing, Computational Statistics, Diagnostic"
+LR_DO_ch7_P1,"7.1. Snedecor and Cochran (1967, p. 300) give a data set with 5 types of soybean seed. The response frate = number of seeds out of 100 that failed to germinate. Five blocks were used. Assume the appropriate model can be used (although this assumption may not be valid due to a possible interaction between the block and the treatment).
+a) Did blocking help? Explain briefly.
+b) Perform the appropriate 4 step test using the output above.","Hypothesis Testing, Diagnostic"
+LR_DO_ch7_P2,"Current nitrogen fertilization recommendations for wheat include applications of specified amounts at specified stages of plant growth. The treatment consisted of six different nitrogen application and rate schedules. The wheat was planted in an irrigated field that had a water gradient in one direction as a result of the irrigation. The field plots were grouped into four blocks, each consisting of six plots, such that each block occurred in the same part of the water gradient. The response was the observed nitrogen content from a sample of wheat stems from each plot. The experimental units were the 24 plots. Data is from Kuehl (1994, p. 263).
+a) Did blocking help? Explain briefly.
+b) Perform the appropriate 4 step test using the output above.","Hypothesis testing, Diagnostic"
+LR_DO_ch7_P3,"An experimenter wanted to test 4 types of an altimeter. There were eight helicopter pilots available for hire with from 500 to 3000 flight hours of experience. The response variable was the altimeter reading error. Perform the appropriate 4 step test using the output below. Data is from Kirk (1982, p. 244).","Hypothesis Testing, Diagnostic"
+LR_DO_ch7_P4,"This problem is for a one way block design and uses data from Box et al. (2005, p. 146).
+a) Copy and paste the SAS program for this problem from (http://lagrange.math.siu.edu/Olive/lreghw.txt). Print out the out- put but only turn in the ANOVA table, residual plot, and response plot.
+b) Do the plots look ok?
+c) Copy the SAS data into Minitab much as done for Problem 6.4. Right below C1 type “block,” below C2 type “treat,” and below C3 type “yield.”
+d) Select Stat>ANOVA>Two-way, select “C3 yield” as the response and “C1 block” as the row factor and “C2 treat” as the column factor. Click on “Fit additive model,” click on “Store residuals,” and click on “Store fits.” Then click on “OK.”
+e) block response scatterplot: Use file commands “Edit>Command Line Editor” and write the following lines in the window.
+GSTD
+LPLOT ‘yield’ vs ‘block’ codes for ‘treat’
+
+","Hypothesis Testing, Diagnostic,Computational Statistic"
+LR_DO_ch7_P5,"This problem is for a Latin square design and uses data from Box et al. (2005, pp. 157–160).
+244 7 Block Designs Copy and paste the SAS program for this problem from
+(http://lagrange.math.siu.edu/Olive/lreghw.txt).
+a) Click on the output and use the menu commands “Edit>Select All” and “Edit>Copy. In Word use the menu command “Paste” then use the left mouse button to highlight the first page of output. Then use the menu command “Cut.” Then there should be one page of output including the ANOVA table. Print out this page.
+b) Copy the data for this problem from (http://lagrange.math.siu.edu/Olive/lregdata.txt)
+into R. Use the following commands to create a residual plot. Copy and paste the plot into Word. (Click on the plot and simultaneously hit the Ctrl and c buttons. Then go to Word and use the menu command “Paste.”)
+  z<-aov(emissions~rblocks+cblocks+additives,auto)
+  summary(z)
+  plot(fitted(z),resid(z))
+  title(""Residual Plot"")
+abline(0,0)
+c) Use the following commands to create a response plot. Copy and paste the plot into Word. (Click on the plot and simultaneously hit the Ctrl and c buttons. Then go to Word and use the menu command “Paste.”)
+  attach(auto)
+  FIT <- auto$emissions - z$resid
+  plot(FIT,auto$emissions)
+  title(""Response Plot"")
+  abline(0,1)
+  detach(auto)
+d) Do the plots look ok?
+e) Were the column blocks useful? Explain briefly. f) Were the row blocks useful? Explain briefly.
+g) Do an appropriate 4 step test.
+
+","Hypothesis Testing, Diagnostic,Computational Statistic"
+LR_DO_ch7_P6,"Obtain the Box et al. (2005, p. 146) penicillin data from (http://lagrange.math.siu.edu/Olive/lregdata.txt) and the R pro- gram ganova2 from (http://lagrange.math.siu.edu/Olive/lregpack. txt). The program does graphical Anova for completely randomized block designs.
+a) Copy and paste the R commands for this problem into R. Include the plot in Word by simultaneously pressing the Ctrl and c keys, then using the menu command “Paste” in Word.
+b) Blocking seems useful because some of the scaled block deviations are outside of the spread of the residuals. The scaled treatment deviations are in the middle of the plot. Do the treatments appear to be significantly different?","Hypothesis Testing, Diagnostic,Computational Statistic"
+LR_DO_ch8_P1,"From the above least squares output, what is the AB effect?",Diagnostic
+LR_DO_ch8_P2,"Ledolter and Swersey (2007, pp. 108–109) describes a 23 experiment designed to increase subscriptions of the magazine Ladies’ Home Journal. The 2005 campaign made 8 brochures containing an order card. Each brochure was mailed to 15042 households, and the response Y was the percentage of orders. Factor A was front side of order card with (−1) highlighting “Double our Best Offer” and (+1) highlighting “We never had a bigger sale.” Factor B was back side of order card with (−1) emphasizing “Two extra years free,” while (+1) featured magazine covers of a previous issue. Factor C was brochure cover with (−1) featuring Kelly Ripa and (+1) Dr. Phil. Assume m = 1.
+a) Find the A effect.
+b) Find the C effect.
+c) Find SSC = MSC.
+d) If two of the three factors A, B and C are active, which is inactive?",Diagnostic
+LR_DO_ch8_P3,"The above table of 23 contrasts is for 25−2 data. III
+a) Estimate the B effect. b) Estimate the D effect.
+
+",Diagnostic
+LR_DO_ch8_P4,"Suppose that for 23 data with m = 2, the MSE = 407.5625. Find SE(effect).
+
+",Diagnostic
+LR_DO_ch8_P5,"Ledolter and Swersey (2007, p. 131) describe a 27−4 data set shown
+III
+with the table of 23 contrasts above. Estimate the D effect.
+",Diagnostic
+LR_DO_ch8_P6,"Kuehl (1994, pp. 361–366) describes a 23 experiment designed to investigate the effects of furnace temperature (1840 or 1880oF), heating time (23 or 25 sec) and transfer time (10 or 12 sec) on the quality of a leaf spring used for trucks. (The response Y was a measure of the quality.) The table of contrasts is shown above.
+a) Find the A effect.
+b) Find the B effect.
+c) Find the AB effect.
+d) If m = 1, find SSA.
+e) If m = 1, find SSB.
+f) If m = 1, find SSAB.
+g) If m = 2 and MSE = 9, find SE(effect).
+(The SE is the same regardless of the effect.)
+h) Suppose high Y = y is desirable. If two of the factors A, B, and C are
+inert and one is active, then which is active and which are inert. (Hint: look at the 4 highest values of y. Is there a pattern?)
+i) If one of the factors has an interaction with the active factor, what is the interaction (e.g. AB, AC, or BC)?
+
+",Diagnostic
+LR_DO_ch8_P7,"Suppose the B effect = −5, SE(effect) = 2, and dfe = 8.
+i) Find a 95% confidence interval for the B effect. ii) Is the B effect significant? Explain briefly.","Diagnostic, Inference"
+LR_DO_ch8_P8,"Copy the Box et al. (2005, p. 199) product development data from (http://lagrange.math.siu.edu/Olive/lregdata.txt) into R.
+Then type the following commands.
+  out <- aov(conversion~K*Te*P*C,devel)
+  summary(out)
+a) Include the output in Word.
+b) What are the five effects with the biggest mean squares? Note: an AB interaction is denoted by A:B in R.","Residual, Diagnostic"
+LR_DO_ch8_P9,"Get the SAS program for this problem from (http://lagrange.math.siu. edu/Olive/lreghw.txt). The data is the pilot plant example from Box et al. (2005, pp. 177–186). The response variable is Y = yield, while the three predictors (T = temp, C = concentration, K = catalyst) are at two levels.
+a) Print out the output but do not turn in the first page. b) Do the residual and response plots look ok?","Diagnostic, Hypothesis testing,Computational statistics"
+LR_DO_ch8_P10,"Get the data for this problem. The data is the pilot plant example from Box et al. (2005, pp. 177–186) examined in Problem 8.9. Minitab needs the levels for the factors and the interactions.
+Highlight the data and use the menu commands “Edit>Copy.” In Minitab, use the menu command “Edit>PasteCells.” After a window appears, click on ok.
+Below C1 type “A”, below C2 type “B”, below C3 type “C” and below C8 type “yield.”
+a) Use the menu command “STAT>ANOVA>Balanced Anova” put “yield” in the responses box and
+A|B|C
+in the Model box. Click on “Storage.” When a window appears, click on “Fits” and “Residuals.” Then click on “OK”. This window will disappear. Click on “OK.”
+b) Next highlight the bottom 8 lines and use the menu commands “Edit>Delete Cells”. Then the data set does not have replication. Use the menu command “STAT>ANOVA>Balanced Anova” put “yield” in the re- sponses box and
+A B C A*C
+in the Model box. Click on “Storage.” When a window appears, click on “Fits” and “Residuals.” Then click on “OK”. This window will disappear. Click on “OK.”
+(The model A|B|C would have resulted in an error message, not enough data.) c) Print the output by clicking on the top window and then clicking on the printer icon.
+d) Make a response plot with the menu commands “Graph>Plot” with yield in the Y box and FIT2 in the X box. Print by clicking on the printer icon.
+e) Make a residual plot with the menu commands “Graph>Plot” with RESI2 in the Y box and FIT2 in the X box. Print by clicking on the printer icon.
+f) Do the plots look ok?","Diagnostic, Hypothesis testing,Computational statistics,Estimation"
+LR_DO_ch8_P11,"et the R code and data for this problem from (http://lagrange.math.siu.edu/Olive/lreghw.txt). The data is the pilot plant
+8.6 Problems 281
+example from Box et al. (2005, pp. 177–186) examined in Problems 8.9 and 8.10.
+a) Copy and paste the code into R. Then copy and paste the output into Notepad. Print out the page of output.
+b) The least squares estimate = coefficient for x1 is half the A effect. So what is the A effect?
+","Diagnostic, Hypothesis testing,Computational statistics,Estimation"
+LR_DO_ch8_P12,"a) Obtain and the R program twocub from (http://lagrange.math.siu.edu/Olive/lregpack.txt). To get the effects, mean squares, and SE(effect) for the Box et al. (2005, p. 177) pilot plant data, type the following commands and include the output in Word.
+  mns <- c(60,72,54,68,52,83,45,80)
+  twocub(mns,m=2,MSE=8)
+b) Which effects appear to be significant from the QQ plot? (Match the effects on the plot with the output on the screen.)","Diagnostic, Hypothesis testing,Computational statistics"
+LR_DO_ch8_P13,"Box et al. (2005, p. 237) describe a 24−1 fractional factorial design. IV
+Assuming that you downloaded the twocub function in the previous problem, type the following R commands.
+  mns <- c(20,14,17,10,19,13,14,10)
+  twocub(mns,m=1)
+a) Include the output in Word, print out the output and label the effects on the output with the corresponding effects from a 24−1 fractional factorial
+IV
+design.
+b) Include the QQ plot in Word. Print out the plot. Which effects (from
+the fractional factorial design) seem to be significant?
+","Diagnostic, Hypothesis testing,Computational statistics"
+LR_DO_ch8_P14,"a) Download lregpack into R, and type the following commands. mns <- c(14,16,8,22,19,37,20,38,1,8,4,10,12,30,13,30)
+  twofourth(mns)
+This is the Ledolter and Swersey (2007, p. 80) cracked pots 24 data and the response and residual plots are from the model without 3 and 4 factor interactions.
+b) Copy the plots into Word and print the plots. Do the response and residual plots look ok?","Diagnostic, Hypothesis testing,Computational statistics,Estimation"
+LR_DO_ch8_P15,"Download lregpack into R. The data is the PB(12) example from
+Box et al. (2005, p. 287).
+a) Type the following commands. Copy and paste the QQ plot into Word
+and print the plot.
+  resp <- c(56,93,67,60,77,65,95,49,44,63,63,61)
+  pb12(resp,k=5)
+b) Copy and paste the output into Notepad and print the output.
+c) As a 25 design, the effects B, D, BD, E, and DE were thought to be real. The PB(12) design works best when none of the interactions is significant. From the QQ plot and the output for the PB(12) design, which factors, if any, appear to be significant?
+d) The output gives the A, B, C, D, and E effects along with the cor- responding least squares coefficients βˆ1, ..., βˆ5. What is the relationship between the coefficients and the effects?
+For parts e) to g), act as if the PB(12) design with 5 factors is appropriate.
+e) The full model has Yˆ = βˆ0 + βˆ1x1 + βˆ2x2 + βˆ3x3 + βˆ4x4 + βˆ5x5. The reduced model is Yˆ = βˆ0 + βˆj xj where xj is the significant term found in c). Give the numerical formula for the reduced model.
+f) Compute Yˆ using the full model if xi = 1 for i = 1,...,5. Then compute Yˆ using the reduced model if xj = 1.
+g) If the goal of the experiment is to produce large values of Y , should xj = 1 or xj = −1 in the reduced model? Explain briefly.","Diagnostic, Hypothesis testing,Computational statistics,Estimation"
+LR_DO_ch9_P1,"The ANOVA table above is for the Montgomery (1984, pp. 386–389) split plot data where the whole plots are assigned to factor A and to blocks in a completely randomized block design. The response variable is tensile strength of paper. Factor A is (preparation) method with 3 levels (1, 2, 3). Factor B is temperature with 4 levels (200, 225, 250, 275). The pilot plant can make 12 runs a day and the experiment is repeated each day, with days as blocks. A batch of pulp is made by one of the 3 preparation methods. Then the batch of pulp is divided into 4 samples, and each sample is cooked at one of the four temperatures.
+a) Perform the test corresponding to A. b) Perform the test corresponding to B. c) Perform the test corresponding to AB.",Hypothesis testing
+LR_DO_ch9_P2,"The ANOVA table above is for the Kuehl (1994, pp. 473–481) split plot data where the whole plots are assigned to factor A and to blocks in a completely randomized block design. The response variable is the average chlorophyll content (mg/gm of turf grass clippings). Factor A is nitrogen fertilizer with 4 levels (1, 2, 3, 4). Factor B is length of time that thatch was allowed to accumulate with 3 levels (2, 5, or 8 years).
+There were 2 blocks of 4 whole plots to which the levels of factor A were assigned. The 2 blocks formed a golf green which was seeded with turf grass. The 8 whole plots were plots of golf green. Each whole plot had 3 subplots to which the levels of factor B were randomly assigned.
+a) Perform the test corresponding to A. b) Perform the test corresponding to B. c) Perform the test corresponding to AB.",Hypothesis testing
+LR_DO_ch9_P3,"The ANOVA table above is for the Snedecor and Cochran (1967, pp. 369–372) split plot data where the whole plots are assigned to factor A and to blocks in a completely randomized block design. Factor A = variety of alfalfa (ladak, cossack, ranger). Each field had two cuttings, with the second cutting on July 7, 1943. Factor B = date of third cutting (none, Sept. 1, Sept. 20, Oct. 7) in 1943. The response variable was yield (tons per acre) in 1944. The 6 blocks were fields of land divided into 3 plots of land, one for each variety. Each of these 3 plots was divided into 4 subplots for date of third cutting. So each block had 3 whole plots and 12 subplots.
+a) Perform the test corresponding to A. b) Perform the test corresponding to B. c) Perform the test corresponding to AB.",Hypothesis testing
+LR_DO_ch9_P4,"Following Montgomery (1984, pp. 386–389), suppose the response variable is tensile strength of paper. One factor is (preparation) method with 3 levels (1, 2, 3). Another factor is temperature with 4 levels (200, 225, 250, 275).
+a) Suppose the pilot plant can make 12 runs a day and the experiment is repeated each day, with days as blocks. A batch of pulp is made by one of the 3 preparation methods. Then the batch of pulp is divided into 4 samples, and each sample is cooked at one of the four temperatures. Which factor, method, or temperature is assigned to subplots?
+b) Suppose the pilot plant could make 36 runs in one day. Suppose that 9 batches of pulp are made, that each batch of pulp is divided into 4 samples, and each sample is cooked at one of the four temperatures. How should the 9 batches be allocated to the three preparation methods, and how should the 4 samples be allocated to the four temperatures?
+c) Suppose the pilot plant can make 36 runs in one day and that the units are 36 batches of material to be made into pulp. Each of the 12 method tem- perature combinations is to be replicated 3 times. What type of experimental design should be used? (Hint: not a split plot.)
+
+",Hypothesis testing
+LR_DO_ch9_P5,"a) Download (http://lagrange.math.siu.edu/Olive/lregdata.txt) into R, and type the following commands. Then copy and paste the output into Notepad and print the output.
+  attach(guay)
+  out<-aov(plants~variety*treatment + Error(flats),guay)
+  summary(out)
+  detach(guay)
+This split plot data is from Chambers and Hastie (1993, p. 158). There are 8 varieties of guayule (rubber plant) and 4 treatments were applied to seeds. The response was the rate of germination. The whole plots were greenhouse flats and the subplots were subplots of the flats. Each flat received seeds of one variety (A). Each subplot contained 100 seeds and was treated with one of the treatments (B). There were m = 3 replications so each variety was planted in 3 flats for a total of 24 flats and 4(24) = 96 observations.
+b) Use the output to test whether the response depends on variety.","Computational statistics, Hypothesis testing"
+LR_DO_ch9_P6,"Download (http://lagrange.math.siu.edu/Olive/lregdata.txt) into R, and type the following commands. Then copy and paste the output into Notepad and print the output. This split plot steel data is from Box et al. (2005, p. 336). The whole plots are time slots to use a furnace, which can hold 4 steel bars at one time. Factor A = heat has 3 levels (360, 370, 380o F). Factor B = coating has 4 levels (4 types of coating: c1, c2, c3, and c4). The response was corrosion resistance.
+a) Perform the test corresponding to A. b) Perform the test corresponding to B. c) Perform the test corresponding to AB.
+
+  attach(steel)
+  out<-aov(resistance~heat*coating + Error(wplots),steel)
+  summary(out)
+  detach(steel)","Computational statistics, Hypothesis testing"
+LR_DO_ch9_P7,"This is the same data as in Problem 9.6, using SAS. Copy and paste the SAS program from (http://lagrange.math.siu.edu/Olive/lrsashw.txt) into SAS, run the program, then print the output. Only include the second page of output.
+To get the correct F statistic for heat, you need to divide MS heat by MS wplots.
+","Computational statistics, Hypothesis testing"
+LR_DO_ch9_P8,"a) Copy and paste the SAS program from (http://lagrange.math.siu.edu/Olive/lrsashw.txt) into SAS, run the pro- gram, then print the output. Only include the second page of output.
+This data is from the SAS Institute (1985, pp. 131–132). The B and AB ANOVA table entries are correct, but the correct entry for A is the last line of output where Block*A is used as the error.
+b) Perform the test corresponding to A. c) Perform the test corresponding to B. d) Perform the test corresponding to AB.","Computational statistics, Hypothesis testing"
+LR_DO_ch10_P1,"a) Find the distribution of X2.
+b) Find the distribution of (X1,X3)T.
+c) Which pairs of random variables Xi and Xj are independent? d) Find the correlation ρ(X1,X3).
+
+","Probablity distribution, Linear algebra"
+LR_DO_ch10_P2,"Recall that if X ∼ Np(μ, Σ), then the conditional distribution of
+X given that X = x is multivariate normal with mean μ +Σ Σ−1(x − 1 2 2 1 12 22 2
+μ ) and covariance matrix Σ − Σ Σ−1Σ
+.
+2
+11 122221
+Let σ12 = Cov(Y,X) and suppose Y and X follow a bivariate normal distribution a) If σ12 = 0, find Y |X. Explain your reasoning. b)Ifσ12 =10findE(Y|X).
+c) If σ12 = 10, find Var(Y |X).
+
+","Probablity distribution, Linear algebra"
+LR_DO_ch10_P3,"a)Ifσ12 =10findE(Y|X).
+b) If σ12 = 10, find Var(Y |X).
+c) If σ12 = 10, find ρ(Y,X), the correlation between Y and X.","Probablity distribution, Linear algebra"
+LR_DO_ch10_P4,"where c > 0 and 0 < γ < 1. Following Example 10.2, show that X has an elliptically contoured distribution assuming that all relevant expectations exist.
+
+","Probablity distribution, Linear algebra"
+LR_DO_ch10_P5,"In Proposition 10.5b, show that if the second moments exist, then Σ can be replaced by Cov(X).","Probablity distribution, Linear algebra"
+LR_DO_ch10_P6,"The table (W) above represents 3 head measurements on 6 people and one ape. Let X1 = cranial capacity, X2 = head length, and X3 = head height. Let x = (X1, X2, X3)T . Several multivariate location estimators, in- cluding the coordinatewise median and sample mean, are found by applying a univariate location estimator to each random variable and then collecting the results into a vector. a) Find the coordinatewise median MED(W).","Probablity distribution, Linear algebra"
+LR_DO_ch10_P7,"Using the notation in Proposition 10.6, show that if the second
+moments exist, then","Probablity distribution, Linear algebra"
+LR_DO_ch10_P8,"Using the notation under Lemma 10.4, show that if X is elliptically contoured, then the conditional distribution of X1 given that X2 = x2 is also elliptically contoured.
+
+","Probablity distribution, Linear algebra,Multiple Linear Regression"
+LR_DO_ch10_P9,"Suppose Y ∼ Nn(Xβ, σ2I). Find the distribution of (XTX)−1XTY if X is an n×p full rank constant matrix and β is a p×1 constant vector.","Probablity distribution, Linear algebra"
+LR_DO_ch10_P10,"Recall that Cov(X, Y ) = E[(X −E(X))(Y −E(Y ))T ]. Using the notation of Proposition 10.6, let (Y, XT )T be ECp+1(μ, Σ, g) where Y is a random variable. Let the covariance matrix of (Y, XT ) be: where c is some positive constant. Show that E(Y |X) = α + βT X where","Probablity distribution, Linear algebra"
+LR_DO_ch10_P11,"Let X be a p×1 random vector with E(X) = 0 and Cov(X) = Σ. Let B be any constant full rank p × r matrix where 1 ≤ r ≤ p. Suppose that for all such conforming matrices B,
+E(X|BT X)=MBBTX
+where M B a p × r constant matrix that depend on B.
+Using the fact that ΣB = Cov(X,BTX) = E(XXTB) =
+E[E(XXTB|BTX)], compute ΣB and show that MB = ΣB(BT ΣB)−1. Hint: what acts as a constant in the inner expectation?
+
+","Probablity distribution, Linear algebra"
+LR_DO_ch10_P12,"a) Download the maha function that creates the classical Maha-
+lanobis distances.
+b) Enter the following commands and check whether observations 1–40 look like outliers.
+  simx2 <- matrix(rnorm(200),nrow=100,ncol=2)
+  outx2 <- matrix(10 + rnorm(80),nrow=40,ncol=2)
+  outx2 <- rbind(outx2,simx2)
+  maha(outx2)","Computational Statistics, Diagnostic, Linear Algebra"
+LR_DO_ch10_P13,"a) Assuming that you have done the two source commands above Problem 10.12 (and the library(MASS) command), type the command ddcomp(buxx). This will make 4 DD plots based on the DGK, FCH, FMCD, and median ball estimators. The DGK and median ball estimators are the two attractors used by the FCH estimator. With the leftmost mouse button, move the cursor to each outlier and click. This data is the Buxton (1920) data and cases with numbers 61, 62, 63, 64, and 65 were the outliers with head lengths near 5 feet. After identifying the outliers in each plot, hold the rightmost mouse button down and click on Stop to advance to the next plot. When done, hold down the Ctrl and c keys to make a copy of the plot. Then paste the plot in Word.
+b) Repeat a) but use the command ddcomp(cbrainx). This data is the Gladstone (1905) data and some infants are multivariate outliers.
+c) Repeat a) but use the command ddcomp(museum[,-1]). This data is the Schaaffhausen (1878) skull measurements and cases 48–60 were apes while the first 47 cases were humans.
+
+","Computational Statistics, Diagnostic"
+LR_DO_ch11_P1,"Suppose Yi = xTi β + εi where the errors are independent N(0,σ2). Then the likelihood function is
+􏱽 −1 􏱾 L(β, σ2) = (2πσ2)−n/2 exp 2σ2 ∥y − Xβ∥2
+.
+ a) Since the least squares estimator βˆ minimizes ∥y − Xβ∥2, show that βˆ is the MLE of β.
+b) Then find the MLE σˆ2 of σ2.","Estimation, Probability distribution,Multiple Linear Regression"
+LR_DO_ch11_P2,"Suppose Yi = xTi β + ei where the errors are iid double exponential
+(0, σ) where σ > 0. Then the likelihood function is 􏱻􏱸n 􏱼
+L ( β , σ ) = 1 1 e x p − 1 | Y i − x Ti β | . 2n σn σ i=1
+   Suppose that β ̃ is a minimizer of 􏱱ni=1 |Yi − xTi β|.
+a) By direct maximization, show that β ̃ is an MLE of β regardless of the
+value of σ.
+b) Find an MLE of σ by maximizing
+􏱻􏱸n 􏱼 L ( σ ) ≡ L ( β ̃ , σ ) = 1 1 e x p − 1 | Y i − x Ti β ̃ | .","Estimation, Probability distribution,Multiple Linear Regression"
+LR_DO_ch11_P3,"Suppose Yi = xTi β + εi where the errors are independent N(0,σ2/wi) where wi > 0 are known constants. Then the likelihood func- tion is a) Suppose that βˆW minimizes 􏱱ni=1 wi(yi −xTi β)2. Show that βˆW is the
+MLE of β.
+b) Then find the MLE σˆ2 of σ2.","Estimation, Probability distribution,Multiple Linear Regression"
+LR_DO_ch11_P4,"Suppose Y ∼ Nn(Xβ, σ2V ) for known positive definite n × n ma- trix V . Then the likelihood function is
+􏱽1􏱾n 1 1 􏱽−1 􏱾 L(β,σ2)= √2π |V|1/2 σn exp 2σ2(y−Xβ)TV−1(y−Xβ) .
+a) Suppose that βˆG minimizes (y − Xβ)T V −1(y − Xβ). Show that βˆG is the MLE of β.
+b) Find the MLE σˆ2 of σ2.","Estimation, Probability distribution,Multiple Linear Regression"
+LR_DO_ch11_P5,"Find the vector a such that aT Y is an unbiased estimator for E(Yi)
+     if the usual linear model holds.","Estimation, Probability distribution,Linear Algebra"
+LR_DO_ch11_P6,"Write the following quantities as bT Y or Y T AY or AY .
+a)Y, b)􏱱(Yi−Yˆi)2, c)􏱱(Yˆi)2, d)βˆ, e)Yˆ ii
+ ","Estimation, Probability distribution,Linear Algebra"
+LR_DO_ch11_P7,"Show that I − H = I − X(XT X)−1XT is idempotent, that is, showthat(I−H)(I−H)=(I−H)2 =I−H.",Linear Algebra
+LR_DO_ch11_P8,"LetY ∼N(μ,σ2)sothatE(Y)=μandVar(Y)=σ2 =E(Y2)− [E(Y )]2. If k ≥ 2 is an integer, then
+E(Y k) = (k − 1)σ2E(Y k−2) + μE(Y k−1).
+Let Z = (Y −μ)/σ ∼ N(0,1). Hence μk = E(Y −μ)k = σkE(Zk). Use this fact and the above recursion relationship E(Zk) = (k − 1)E(Zk−2) to find a) μ3 and b) μ4.
+
+","Estimation, Probability distribution,Linear Algebra"
+LR_DO_ch11_P9,"Let A and B be matrices with the same number of rows. If C is another matrix such that A = BC, is it true that rank(A) = rank(B)? Prove or give a counterexample.",Linear Algebra
+LR_DO_ch11_P10,"Let x be an n×1 vector and let B be an n×n matrix. Show that xTBx = xTBTx.
+(The point of this problem is that if B is not a symmetric n × n matrix, T T B+BT
+thenx Bx=x AxwhereA= 2 isasymmetricn×nmatrix.)",Linear Algebra
+LR_DO_ch11_P11,"Consider the model Yi = β1 +β2Xi,2 +· · ·+βpXi,p +ei = xTi β+ei.
+ The least squares estimator βˆ minimizes 􏱸n Q O L S ( η ) =
+( Y i − x Ti η ) 2 and the weighted least squares estimator minimizes where the wi,Yi and xi are known quantities. Show that
+
+","Linear Algebra, Estimation, Multiple Linear regression"
+LR_DO_ch11_P12,"Suppose that X is an n×p matrix but the rank of X < p < n. Then the normal equations XT Xβ = XT Y have infinitely many solutions. Let βˆ be a solution to the normal equations. So XTXβˆ = XTY. Let G = (XT X)− be a generalized inverse of (XT X). Assume that E(Y ) = Xβ and Cov(Y ) = σ2I. It can be shown that all solutions to the normal equations have the form bz given below.
+a)Showthatbz=GXTY +(GXTX−I)zisasolutiontothenormal equations where the p × 1 vector z is arbitrary.
+b) Show that E(bz) ̸= β.
+(Hence some authors suggest that bz should be called a solution to the normal equations but not an estimator of β.)
+c) Show that Cov(bz) = σ2GXT XGT .
+d) Although G is not unique, the pro jection matrix P = X GX T onto C(X) is unique. Use this fact to show that Yˆ = Xbz does not depend on G or z.
+e) There are two ways to show that aT β is an estimable function. Either show that there exists a vector c such that E(cT Y ) = aT β, or show that a ∈ C(XT ). Suppose that a = XT w for some fixed vector w. Show that E(aT bz) = aT β.
+(Hence aT β is estimable by aT bz where bz is any solution of the normal equations.)
+f) Suppose that a = XTw for some fixed vector w. Show that Var(aTbz) = σ2wTPw.","Linear Algebra, Estimation, Multiple Linear regression"
+LR_DO_ch12_P1,"Consider the Hotelling Lawley test statistic. Let T(W)=n [vec(LBˆ)]T[Σˆ−1 ⊗(LWLT)−1][vec(LBˆ)].
+ε S h o w T ( Wˆ ) = [ v e c ( L Bˆ ) ] T [ Σˆ − 1 ⊗ ( L ( X T X ) − 1 L T ) − 1 ] [ v e c ( L Bˆ ) ] .
+
+",Linear Algebra
+LR_DO_ch12_P2,"Consider the Hotelling Lawley test statistic. Let T =
+[vec(LBˆ )]T [Σˆ −1 ⊗ (L(XT X)−1LT )−1][vec(LBˆ )]. ε Let L = Lj = [0,...,0,1,0,...,0] have a 1 in the jth position. Let bˆTj = LBˆ
+be the jth row of Bˆ . Let dj = Lj(XT X)−1LTj = (XT X)−1, the jth diagonal jj
+entry of (X T X )−1 . Then T = 1 bˆT Σˆ −1 bˆ . The Hotelling Lawley statistic j dj j ε j
+ U = tr([(n − p)Σˆ ε]−1Bˆ T LT [L(XT X)−1LT ]−1LBˆ ]). HenceifL=L,thenU = 1 tr(Σˆ−1bˆbˆT).
+j jdj(n−p)εjj
+Using tr(ABC) = tr(CAB) and tr(a) = a for scalar a, show that
+ (n−p)Uj =Tj.","Linear Algebra, Hypothesis Testing"
+LR_DO_ch12_P3,"Consider the Hotelling Lawley test statistic. Using the Searle (1982,
+p. 333) identity
+tr(AGT DGC) = [vec(G)]T [CA ⊗ DT ][vec(G)],
+show (n − p)U(L) = tr[Σˆ −1Bˆ TLT[L(XTX)−1LT]−1LBˆ ] ε
+= [vec(LBˆ )]T [Σˆ −1 ⊗ (L(XT X)−1LT )−1][vec(LBˆ )] by identifying A, G, D, ε
+and C.","Computational Statistics, Hypothesis Testing"
+LR_DO_ch12_P4,"The above output is for the R Seatbelts data set where Y1 = drivers = number of drivers killed or seriously injured, Y2 = front = number of front seat passengers killed or seriously injured, and Y3 = back = num- ber of back seat passengers killed or seriously injured. The predictors were x2 = kms = distance driven, x3 = price = petrol price, x4 = van = number of van drivers killed, and x5 = law = 0 if the law was in effect that month and 1 otherwise. The data consists of 192 monthly totals in Great Britain from January 1969 to December 1984, and the compulsory wearing of seat belts law was introduced in February 1983.
+a) Do the MANOVA F test. b) Do the F4 test.","Linear Algebra, Hypothesis Testing"
+LR_DO_ch12_P5,"Sketch a DD plot of the residual vectors ˆεi for the multivariate linear regression model if the error vectors εi are iid from a multivariate normal distribution.
+  y<-USJudgeRatings[,c(9,10,12)]
+  x<-USJudgeRatings[,-c(9,10,12)]
+  mltreg(x,y,indices=c(2,5,6,7,8))
+  $partial
+       partialF      Pval
+  [1,] 1.649415 0.1855314
+  $MANOVA
+        MANOVAF         pval
+  [1,] 340.1018 1.121325e-14","Multiple Linear Regression, Hypothesis Testing"
+LR_DO_ch12_P6,"The above output is for the R judge ratings data set consisting of lawyer ratings for n = 43 judges. Y1 = oral = sound oral rulings, Y2 = writ = sound written rulings, and Y3 = rten = worthy of retention. The predictors were x2 = cont = number of contacts of lawyer with judge, x3 = intg = judicial integrity, x4 = dmnr = demeanor, x5 = dilg = diligence, x6 = cfmg = case flow managing, x7 = deci = prompt decisions, x8 = prep = preparation for trial, x9 = fami = familiarity with law, and x10 = phys = physical ability.
+a) Do the MANOVA F test.
+b) Do the MANOVA partial F test for the reduced model that deletes
+x2, x5, x6, x7, and x8.","Linear Algebra, Hypothesis Testing, Computational Statistics"
+LR_DO_ch12_P7,Let βi be p × 1 and suppose,Probability distribution
+LR_DO_ch12_P8,"This problem examines multivariate linear regression on the Cook and Weisberg (1999a) mussels data with Y1 = log(S) and Y2 = log(M) where S is the shell mass and M is the muscle mass. The predictors are X2 = L, X3 = log(W), and X4 = H: the shell length, log(width), and height.
+a) The R command for this part makes the response and residual plots for each of the two response variables. Click the rightmost mouse button and highlight Stop to advance the plot. When you have the response and residual plots for one variable on the screen, copy and paste the two plots into Word. Do this two times, once for each response variable. The plotted points fall in roughly evenly populated bands about the identity or r = 0 line.
+b) Copy and paste the output produced from the R command for this part from $partial on. This gives the output needed to do the MANOVA F test, MANOVA partial F test, and the Fj tests.
+c) The R command for this plot makes a DD plot of the residuals and adds the lines corresponding to the three prediction regions of Section 12.3. The robust cutoff is larger than the semiparametric cutoff. Place the plot in Word. Do the residuals appear to follow a multivariate normal distribution?
+d) Do the MANOVA partial F test where the reduced model deletes X3 and X4.
+e) Do the F2 test.
+f) Do the MANOVA F test.
+
+","Diagnostic,Computational Statistics"
+LR_DO_ch12_P9,"This problem examines multivariate linear regression on the SAS Institute (1985, p. 146) Fitness Club Data data with Y1 = chinups, Y2 = situps, and Y3 = jumps. The predictors are X2 = weight, X3 = waist, and X4 = pulse.
+a) The R command for this part makes the response and residual plots for each of the three variables. Click the rightmost mouse button and highlight Stop to advance the plot. When you have the response and residual plots for one variable on the screen, copy and paste the two plots into Word. Do this three times, once for each response variable. Are there any outliers?
+b) The R command for this part makes a DD plot of the residuals and adds the lines corresponding to the three prediction regions of Section 12.3. The robust cutoff is larger than the semiparametric cutoff. Place the plot in Word. Are there any outliers? (Right click Stop once.)
+
+"," Hypothesis Testing, Computational Statistics"
+LR_DO_ch12_P10,"This problem uses the lregpack function mregsim to simulate the Wilks’ Λ test, Pillai’s trace test, Hotelling Lawley trace test, and Roy’s largest root test for the Fj tests and the MANOVA F test for multivariate linear regression. When mnull = T the first row of B is 1T while the remaining rows are equal to 0. Hence the null hypothesis for the MANOVA F test is true. When mnull = F the null hypothesis is true for p = 2, but false for p>2.NowthefirstrowofBis1T andthelastrowofBis0.Ifp>2, then the second to last row of B is (1, 0, ..., 0), the third to last row is (1, 1, 0, ..., 0) et cetera as long as the first row is not changed from 1T. First m iid errors zi are generated such that the m errors are iid with variance σ2. Then εi = Azi so that Σˆ ε = σ2AAT = (σij ) where the diagonal entries σii = σ2[1 + (m − 1)ψ2] and the off diagonal entries σij = σ2[2ψ + (m − 2)ψ2] where ψ = 0.10. Terms like Wilkcov give the percentage of times the Wilks’ test rejected the F1, F2, . . . , Fp tests. The $mancv wcv pcv hlcv rcv fcv output gives the percentage of times the 4 test statistics reject the MANOVA F test. Here hlcov and fcov both correspond to the Hotelling Lawley test using the formulas in Problem 12.3.
+5000 runs will be used so the simulation may take several minutes. Sample sizes n = (m+p)2,n = 3(m+p)2, and n = 4(m+p)2 were interesting. We want coverage near 0.05 when H0 is true and coverage close to 1 for good power when H0 is false. Multivariate normal errors were used in a) and b) below.
+a) Copy the coverage parts of the output produced by the R commands forthispartwheren=20,m=2,andp=4.HereH0 istrueexceptfor the F1 test. Wilks’ and Pillai’s tests had low coverage < 0.05 when H0 was false. Roy’s test was good for the Fj tests, but why was Roy’s test bad for the MANOVA F test?
+b) Copy the coverage parts of the output produced by the R commands forthispartwheren=20,m=2,andp=4.HereH0 isfalseexceptforthe F4 test. Which two tests seem to be the best for this part?","Linear Algebra, Hypothesis Testing, Computational Statistics"
+LR_DO_ch12_P11,"This problem uses the lregpack function mpredsim to simulate the prediction regions for yf given xf for multivariate regression. With 5000 runs this simulation may take several minutes. The R command for this problem generates iid lognormal errors then subtracts the mean, producing zi. Then the εi = Azi are generated as in Problem 12.10 with n=100, m=2, and p=4. The nominal coverage of the prediction region is 90%, and 92% of the training data is covered. The ncvr output gives the coverage of the nonparametric region. What was ncvr?","Linear Algebra, Hypothesis Testing, Computational Statistics"
+LR_DO_ch13_P1,"Consider trying to estimate the proportion of males from a popu- lation of males and females by measuring the circumference of the head. Use the above logistic regression output to answer the following problems.
+a) Predict ρˆ(x) if x = 550.0. b) Find a 95% CI for β.
+c) Perform the 4 step Wald test for Ho : β = 0.
+
+","Prediction, Hypothesis Testing, Inference"
+LR_DO_ch13_P2,"Now the data is as in Problem 13.1, but try to estimate the pro- portion of males by measuring the circumference and the length of the head. Use the above logistic regression output to answer the following problems.
+a) Predict ρˆ(x) if circumference = x1 = 550.0 and length = x2 = 200.0. b) Perform the 4 step Wald test for Ho : β1 = 0.
+c) Perform the 4 step Wald test for Ho : β2 = 0.
+
+",Logistic Regression
+LR_DO_ch13_P3,"A museum has 60 skulls of apes and humans. Lengths of the lower jaw, upper jaw, and face are the explanatory variables. The response variable is ape (= 1 if ape, 0 if human). Using the output above, perform the four step deviance test for whether there is an LR relationship between the response variable and the predictors.","Prediction, Hypothesis Testing, Inference"
+LR_DO_ch13_P4,"Suppose the full model is as in Problem 13.3, but the reduced model omits the predictor face length. Perform the 4 step change in deviance test to examine whether the reduced model can be used.
+The following three problems use the possums data from Cook and Weis- berg (1999a).
+
+","Prediction, Hypothesis Testing, Inference"
+LR_DO_ch13_P5,"Use the above output to perform inference on the number of pos- sums in a given tract of land. The output is from a Poisson regression.
+a) Predict μˆ(x) if habitat = x1 = 5.8 and stags = x2 = 8.2. b) Perform the 4 step Wald test for Ho : β1 = 0.
+c) Find a 95% confidence interval for β2.
+
+","Prediction, Hypothesis Testing, Inference,Poisson distribution"
+LR_DO_ch13_P6,"Perform the 4 step deviance test for the same model as in Prob-
+lem 13.5 using the output above.
+
+",Diagnostic
+LR_DO_ch13_P7,Let the reduced model be as in Problem 13.5 and use the output for the full model be shown above. Perform a 4 step change in deviance test.,"Diagnostic, Hypothesis Testing"
+LR_DO_ch13_P8,"The above table gives summary statistics for 4 models considered as final submodels after performing variable selection. (Several of the predic- tors were factors, and a factor was considered to have a bad Wald p-value > 0.05 if all of the dummy variables corresponding to the factor had p-values > 0.05. Similarly the factor was considered to have a borderline p-value with 0.01 ≤ p-value ≤ 0.05 if none of the dummy variables corresponding to the factor had a p-value < 0.01 but at least one dummy variable had a p-value between 0.01 and 0.05.) The response was binary and logistic regression was used. The response plot for the full model B1 was good. Model B2 was the minimum AIC model found. There were 1000 cases: for the response, 300 were 0s and 700 were 1s.a) For the change in deviance test, if the p-value ≥ 0.07, there is little evidence that Ho should be rejected. If 0.01 < p-value < 0.07, then there is moderate evidence that Ho should be rejected. If p-value ≤ 0.01, then there is strong evidence that Ho should be rejected. For which models, if any, is there strong evidence that “Ho: reduced model is good” should be rejected.
+446 13 GLMs and GAMs b) For which plot is “corr(B1:ETA’U,Bi:ETA’U)” (using notation from
+Arc: ηT u instead of βT x) relevant?
+c) Which model should be used as the final submodel? Explain briefly why
+each of the other 3 submodels should not be used.
+",Diagnostic
+LR_DO_ch13_P9,"Activate the banknote.lsp dataset with the menu commands
+“File > Load > Data > banknote.lsp.” Scroll up the screen to read the data description. Twice you will fit logistic regression models and include the coefficients in Word. Print out this output when you are done and include the output with your homework.
+From Graph&Fit select Fit binomial response. Select Top as the predictor, Status as the response, and ones as the number of trials.
+a) Include the output in Word.
+b) Predict ρˆ(x) if x = 10.7.
+c) Find a 95% CI for β.
+d) Perform the 4 step Wald test for Ho : β = 0.
+e) From Graph&Fit select Fit binomial response. Select Top and Diagonal as predictors, Status as the response, and ones as the number of trials. Include the output in Word.
+f) Predict ρˆ(x) if x1 = Top = 10.7 and x2 = Diagonal = 140.5. g) Find a 95% CI for β1.
+h) Find a 95% CI for β2.
+i) Perform the 4 step Wald test for Ho : β1 = 0.
+j) Perform the 4 step Wald test for Ho : β2 = 0.","Hypothesis Testing, Inference, Prediction, Computational Statistics"
+LR_DO_ch13_P10,"Activate banknote.lsp in Arc. with the menu commands
+“File > Load > Data > banknote.lsp.” Scroll up the screen to read the data description. From Graph&Fit select Fit binomial response. Select Top and Diagonal as predictors, Status as the response, and ones as the number of trials.
+a) Include the output in Word.
+13.10 Problems 447
+b) From Graph&Fit select Fit linear LS. Select Diagonal and Top for pre- dictors, and Status for the response. From Graph&Fit select Plot of and select L2:Fit-Values for H, B1:Eta’U for V, and Status for Mark by. Include the plot
+in Word. Is the plot linear? How are αˆOLS +βˆTOLSx and αˆlogistic +βˆTlogisticx related (approximately)?
+
+","Multiple Linear Regression,Computational Statistics, "
+LR_DO_ch13_P11,"Activate possums.lsp in Arc with the menu commands
+“File > Load > Data > possums.lsp.” Scroll up the screen to read the data description.
+a) From Graph&Fit select Fit Poisson response. Select y as the response and select acacia, bark, habitat, shrubs, stags, and stumps as the predictors. Include the output in Word. This is your full model.
+b) Response plot: From Graph&Fit select Plot of. Select P1:Eta’U for the H box and y for the V box. From the OLS popup menu select Poisson and move the slider bar to 1. Move the lowess slider bar until the lowess curve tracks the exponential curve well. Include the response plot in Word.
+c) From Graph&Fit select Fit Poisson response. Select y as the response and select bark, habitat, stags, and stumps as the predictors. Include the output in Word.
+d) Response plot: From Graph&Fit select Plot of. Select P2:Eta’U for the H box and y for the V box. From the OLS popup menu select Poisson and move the slider bar to 1. Move the lowess slider bar until the lowess curve tracks the exponential curve well. Include the response plot in Word.
+e) Deviance test. From the P2 menu, select Examine submodels and click on OK. Include the output in Word and perform the 4 step deviance test.
+f) Perform the 4 step change of deviance test.
+g) EE plot. From Graph&Fit select Plot of. Select P2:Eta’U for the H box and P1:Eta’U for the V box. Move the OLS slider bar to 1. Click on the Options popup menu and type “y=x”. Include the plot in Word. Is the plot linear?","Logistic Regression,Computational Statistics"
+LR_DO_ch13_P12,"In this problem you will find a good submodel for the possums data.
+Activate possums.lsp in Arc with the menu commands
+“File > Load > Data > possums.lsp.” Scroll up the screen to read the data description.
+From Graph&Fit select Fit Poisson response. Select y as the response and select Acacia, bark, habitat, shrubs, stags, and stumps as the predictors.
+In Problem 13.11, you showed that this was a good full model.a) Using what you have learned in class find a good submodel and include
+the relevant output in Word.
+(Hints: Use forward selection and backward elimination and find the model Imin with the smallest AIC. Let Δ(I) = AIC(I)−AIC(Imin). Then find the model II with the fewest number of predictors such that Δ(II) ≤ 2. Then submodel II is the initial submodel to examine. Fit model II and look at the Wald test p–values. Try to eliminate predictors with large p–values but make sure that the deviance does not increase too much. Also examine submodels I with fewer predictors than II with Δ(I) ≤ 7. You may have several models, say P2, P3, P4, and P5 to look at. Make a scatterplot matrix of the Pi:ETA’U from these models and from the full model P1. Make the EE and response plots for each model. The correlation in the EE plot should be at least 0.9 and preferably greater than 0.95. As a very rough guide for Poisson regression, the number of predictors in the full model should be less than n/5 and the number of predictors in the final submodel should be less than n/10.)
+b) Make a response plot for your final submodel, say P2. From Graph&Fit select Plot of. Select P2:Eta’U for the H box and y for the V box. From the OLS popup menu select Poisson and move the slider bar to 1. Move the lowess slider bar until the lowess curve tracks the exponential curve well. Include the response plot in Word.
+c) Suppose that P1 contains your full model and P2 contains your final submodel. Make an EE plot for your final submodel: from Graph&Fit select Plot of. Select P1:Eta’U for the V box and P2:Eta’U, for the H box. After the plot appears, click on the options popup menu. A window will appear. Type y = x and click on OK. This action adds the identity line to the plot. Also move the OLS slider bar to 1. Include the plot in Word.
+d) Using a), b), c), and any additional output that you desire (e.g., AIC(full), AIC(Imin), AIC(II), and AIC(final submodel), explain why your final submodel is good.
+Warning: The following 5 problems use data from the book’s webpage. Save the data files on a flash drive. Get in Arc and use the menu commands “File > Load” and a window with a Look in box will appear. Click on the black triangle and then on Removable Disk (G:). Then click twice on the data set name.
+","Diagnostic,Computational Statistics,Logistic Regression"
+LR_DO_ch13_P13,"(Response Plot): Activate cbrain.lsp in Arc with the menu com- mands “File > Load > Removable Disk (G:) > cbrain.lsp.” Scroll up the screen to read the data description. From Graph&Fit select Fit binomial response. Select brnweight, cephalic, breadth, cause, size, and headht as pre- dictors, sex as the response, and ones as the number of trials. Perform the logistic regression and from Graph&Fit select Plot of. Place sex on V and B1:Eta’U on H. From the OLS popup menu, select Logistic and move the
+13.10 Problems 449
+slider bar to 1. From the lowess popup menu select SliceSmooth and move the slider bar until the fit is good. Include your plot in Word. Are the slice means (observed proportions) tracking the logistic curve (fitted proportions) very well? Use lowess if SliceSmooth does not work.
+","Diagnostic,Computational Statistics"
+LR_DO_ch13_P14,"Suppose that you are given a data set, told the response, and asked to build a logistic regression model with no further help. In this prob- lem, we use the cbrain data to illustrate the process.
+a) Activate cbrain.lsp in Arc with the menu commands
+“File > Load > Removable Disk (G:) > cbrain.lsp.” Scroll up the screen to read the data description. From Graph&Fit select Scatterplot-matrix of. Place sex in the Mark by box. Then select age, breadth, cause, cephalic, circum, headht, height, length, size, and sex. Include the scatterplot matrix in Word.
+b) Use the menu commands “cbrain>Make factors” and select cause. This makes cause into a factor with 2 degrees of freedom. Use the menu commands “cbrain>Transform” and select age and the log transformation.
+Why was the log transformation chosen?
+c) From Graph&Fit select Plot of and select size in H. Also place sex in the Mark by box. A plot will come up. From the GaussKerDen menu (the triangle to the left) select Fit by marks, move the sliderbar to 0.9, and include the plot in Word.
+d) Use the menu commands “cbrain>Transform” and select size and the log transformation. From Graph&Fit select Fit binomial response. Select age, log(age), breadth, {F}cause, cephalic, circum, headht, height, length, size, and log(size) as predictors, sex as the response, and ones as the number of trials. This is the full model B1. Perform the logistic regression and include the relevant output for testing in Word.
+e) From Graph&Fit select Plot of. Place sex on V and B1:Eta’U on H. From the OLS popup menu, select Logistic and move the slider bar to 1. From the lowess popup menu select SliceSmooth and move the slider bar until the fit is good. Include your plot in Word. Are the slice means (observed proportions) tracking the logistic curve (fitted proportions) fairly well? (Use lowess if SliceSmooth does not work.)
+f) From B1 select Examine submodels and select Add to base model (For- ward Selection). Include the output with the header “Base terms: ...” and from “Add: length 259” to “Add: {F}cause 258” in Word.
+g) From B1 select Examine submodels and select Delete from full model (Backward Elimination). Include the output with df corresponding to the minimum AIC model in Word. What predictors does this model use?
+450 13 GLMs and GAMs
+h) As a final submodel B2, use the model from f): from Graph&Fit select Fit binomial response. Select age, log(age), circum, height, length, size, and log(size) as predictors, sex as the response, and ones as the number of trials. Perform the logistic regression and include the relevant output for testing in Word.
+i) Put the EE plot H B2:Eta’U versus V B1:Eta’U in Word. Is the plot linear?
+j) From Graph&Fit select Plot of. Place sex on V and B2:Eta’U on H. From the OLS popup menu, select Logistic and move the slider bar to 1. From the lowess popup menu select SliceSmooth and move the slider bar until the fit is good. Include your plot in Word. Are the slice means (observed proportions) tracking the logistic curve (fitted proportions) fairly well? (Use lowess if SliceSmooth does not work.)
+k) Perform the 4 step change in deviance test using the full model in d) and the reduced submodel in h).
+Now act as if the final submodel is the full model.
+l) From B2 select Examine submodels, click OK, and include the output in
+Word. Then use the output to perform a 4 step deviance test on the submodel.
+m) From Graph&Fit select Inverse regression. Select age, log(age), circum, height, length, size, and log(size) as predictors, and sex as the response. From Graph&Fit select Plot of. Place I3:SIR.p1 on the H axis and B2:Eta’U on the V axis. Include the plot in Word. Is the plot linear?","Diagnostic,Computational Statistics,Multiple Linear Regression"
+LR_DO_ch13_P15,"In this problem you will find a good submodel for the ICU data obtained from STATLIB or the text’s website. This data set will violate some of the rules of thumb: the model II does not have enough predictors to make a good EE plot. See Example 13.13.
+a) Activate ICU.lsp in Arc with the menu commands
+“File > Load >.” Then use the upper box to navigate to where ICU.lsp is stored, for example Removable Disk (G:). Scroll up the screen to read the data description.
+b) Use the menu commands “ICU>Make factors” and select loc and race.
+c) From Graph&Fit select Fit binomial response. Select STA as the re- sponse and ones as the number of trials. The full model will use every predic- tor except ID, LOC, and RACE (the latter 2 are replaced by their factors): select AGE, Bic, CAN, CPR, CRE, CRN, FRA, HRA, INF, {F}LOC , PCO, PH, PO2 , PRE , {F}RACE , SER, SEX, SYS, and TYP as predictors.
+13.10 Problems 451 Perform the logistic regression and include the relevant output for testing in
+Word.
+d) Make the response plot for the full model: from Graph&Fit select Plot of. Place STA on V and B1:Eta’U on H. From the OLS popup menu, select Logistic and move the slider bar to 1. From the lowess popup menu select SliceSmooth and move the slider bar until the fit is good. Use lowess if Slice- Smooth does not work. Include your plot in Word. Is the full model good?
+e) Using what you have learned in class, find a good submodel and include the relevant output in Word.
+[Hints: Use forward selection and backward elimination and find the model with the minimum AIC. Let Δ(I) = AIC(I) − AIC(Imin). Then find the model II with the fewest number of predictors such that Δ(II) ≤ 2. Then submodel II is the initial submodel to examine. Fit model II and look at the Wald test p–values. Try to eliminate predictors with large p–values but make sure that the deviance does not increase too much. Also examine submodels I with fewer predictors than II with Δ(I) ≤ 7. WARNING: do not delete part of a factor. Either keep all 2 factor dummy variables or delete all I-1=2 factor dummy variables. You may have several models, say B2, B3, B4, and B5 to look at. Make the EE and response plots for each model. WARNING: if a useful factor is in the full model but not the reduced model, then the EE plot may have I = 3 lines if the factor should be in the model. See part h) below.]
+f) Make a response plot for your final submodel.
+g) Suppose that B1 contains your full model and B5 contains your final submodel. Make an EE plot for your final submodel: from Graph&Fit select Plot of. Select B1:Eta’U for the V box and B5:Eta’U, for the H box. After the plot appears, click on the options popup menu. A window will appear. Type y = x and click on OK. This action adds the identity line to the plot. Include the plot in Word.
+If the EE plot is good, then the plotted points will cluster about the identity line. For model II, some points are far away from the identity line. At least one variable needs to be added to model II to get a good submodel and EE plot, violating the rule of thumb that submodels with more predictors than II should not be examined. Variable selection may be suggesting poor submodels because of clusters of cases that are given exact probabilities of 0 or 1. Try adding {F}RACE to the predictors in II .
+h) Using e), f), g), and any additional output that you desire [e.g. AIC(full), AIC(Imin), AIC(II), and AIC(final submodel)], explain why your final submodel is good.","Diagnostic,Computational Statistics"

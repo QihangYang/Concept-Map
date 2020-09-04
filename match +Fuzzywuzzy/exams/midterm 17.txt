@@ -1,0 +1,750 @@
+Statistical Machine Learning (GU4241/GR5241)
+Spring 2017 https://courseworks.columbia.edu
+
+Cynthia Rush cgr2130
+Peter Lee, Gabriel Loaiza jl4304, gl2480
+
+MIDTERM EXAM
+Total time: 75 minutes. To be taken in-class, Tuesday 7 March 2017.
+
+Do not open this exam until instructed. Carefully read the following instructions. You may not receive help from your neighbors, your friends, the internet, or any other source beyond your own knowledge of the material and your reference sheet. If you do so, you will receive a 0 grade on the midterm and will possibly fail the class or face expulsion from the program.
+Write your name, UNI, and the course title on the cover of the blue book. All solutions should be written in the accompanying blue book. No other paper (including this exam sheet) will be graded. To receive credit for this exam, you must submit blue book with the exam paper placed inside. As reference you may use one sheet of 8.5×11 in paper, on which any notes can be written (front and back). No other materials are allowed (including calculators, textbooks, computers, and other electronics). To receive full credit on multi-point problems, you must explain how you arrived at your solutions. Each problem is divided up into several parts. Many parts can be answered independently, so if you are stuck on a particular part, you may wish to skip that part and return to it later. Good luck.
+
+1. (25 points) Please briefly explain your answer for the following questions. (a) (3 points) Consider the convex optimization problem over x  R2:
+
+min f (x) s.t. g(x) = 0
+
+Consider a point x with f (x) =
+
+1.2 0.7
+
+and g(x) =
+
+3.6 2.1
+
+.
+
+Is
+
+x
+
+a
+
+minimum?
+
+Solution: Yes. The gradient of the objective and the gradient of the constraint function are collinear.
+
+(b) (3 points) Consider the convex optimization problem over x  R2:
+
+min f (x) s.t. g(x)  0
+
+Consider a point x with f (x) =
+
+1.2 0.7
+
+and g(x) =
+
+3.6 2.1
+
+.
+
+Is
+
+x
+
+a
+
+minimum?
+
+Solution: No. The gradient of the objective and the gradient of the constraint function must be collinear and in opposite directions for x to be a constrained minimum.
+
+(c) (4 points) Briefly (1 sentence) describe how an ensemble method works.
+Solution: An ensemble method works by training many weak classifiers (must be better than a random guess only) and combines their classifications using a majority vote.
+
+(d) (3 points) Considering a binary classifier: yi  {-1, +1}, if we are exclusively interested in minimizing misclassification rate, what loss function should we use?
+Solution: The usual 01 loss: L01(yi, f (xi)) = I {yi = f (xi)}.
+(e) (4 points) In the cascade classifier used to train face detection we modified the standard loss that you identified above. In what we did we modify the loss and why did we do this?
+Solution: In the cascade classifier we modified the usual 01 loss to penalize false negative (faces being classified as background) much more than false positives (background classified as faces). We did this to handle class imbalance.
+
+(f) (5 points) Assume we know the class conditional distributions of the data: p(x|y = +1) is exactly spherical Gaussians with mean vector µ+ and covariance 2I, and similar for the -1 class: p(x|y = -1) = N x; µ-, 2I . Notice that  is the same for both classes, but
+the mean vectors are not. Describe what happens to the misclassification rate for different values of µ+ , µ- , 2. More specifically under what scenario would a classifier achieve a low
+misclassification rate, and conversely a high misclassification rate? Justify your answer.
+
+2
+
+Solution: Any classifier works best when the distance between the entries in our mean vectors is high, and when the variance is low. Conversely we have a high misclassification rate when the entries of the vector are largely the same and the variance is high. (g) (3 points) If the data is distributed according to the above assumptions, what method should we use to learn the Bayes-optimal classifier? Solution: In this setting the Naive Bayes assumption holds true. It is thus the estimator which minimizes Bayes risk (The Bayes estimator).
+3
+
+2. (16 points) Decision trees.
+
+(a) (8 points) For each of the following data sets, explain whether or not a basic decision tree of
+
+depth 2 will excel in classifying the data. If not, propose a classifier that will.
+
+[A]
+
+[B]
+
+y 0.0 0.2 0.4 0.6 0.8 1.0
+
+y 0.0 0.2 0.4 0.6 0.8 1.0
+
+qq
+
+q
+
+qq q
+
+qq
+qq q q q
+
+q
+
+q
+
+qq q qq q
+
+q
+
+q
+
+q
+
+qqqq
+
+q q
+
+q
+
+qq q
+
+q
+
+qq
+
+q
+
+q
+
+q
+
+0.0 0.2 0.4 0.6 0.8 1.0 x
+[C]
+
+qq qq
+
+q
+
+q
+
+q
+q qq
+q
+
+qq
+q q
+q q
+
+q
+
+qq
+
+qq
+
+q q
+q
+
+q
+
+q q qq
+
+0.0 0.2 0.4 0.6 0.8 1.0 x
+[D]
+
+1.0
+
+0.5
+
+0.0
+
+y
+
+q q
+
+q
+
+q qqqqqqqqqqqqqqqqqqqqqqq
+
+q
+
+q
+
+q
+
+-1.0
+
+-0.5
+
+0.0
+
+0.5
+
+1.0
+
+x
+
+y
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+q
+
+q
+q q
+
+q q
+
+q qq q q
+
+q q
+
+q q
+
+q qq qq
+
+qqqqq
+
+qq
+
+q q
+
+q
+
+qq
+
+qq
+
+0.0 0.2 0.4 0.6 0.8 1.0 1.2 x
+
+-1.0 -0.5
+
+Solution: A. Yes. B. No, perceptron. C. No, boosting with perceptron. D. Yes.
+(b) (4 points) Consider training AdaBoost on the following data set, where the data are linearly separable except for the existence of an outlier. What would happen to the weight assigned to that outlier after many boosting iterations? Would you conclude that AdaBoost is robust to outliers?
+
+4
+
+y -0.5 0.0 0.5 1.0 1.5 2.0
+
+q
+
+q
+
+q
+
+q qq
+q
+
+qqqqqqqqqqqqqqqqqqqqqqq
+
+-0.5 0.0
+
+0.5
+
+1.0
+
+1.5
+
+2.0
+
+x
+
+Solution: Boosting. Large weight will accumulate on the outlier and steer the classifier towards overfitting. Therefore AdaBoost is not robust to outliers.
+(c) (4 points) In AdaBoost, would you stop the iteration if the error rate of the current weak learner on the weighted training data is 0? Explain.
+Solution: Yes. In this case, there are no misclassifications and continue training would only result in the same weak classifier. On the other hand, the weight t = + for the current classifier, there is no need to combine it with other classifiers.
+
+5
+
+3. (20 points) Gambling. A particular gambling scheme involves n rounds of play. In the first round, the payoff is X1  exp(, ) for some payoff parameters  and . For the ith round, the payoff is Xi|Xi-1  exp( + Xi-1,  + Xi-1). Recall: we say X  exp(a, b) if:
+fX (x) = ae-a(x-b)I{x  b}.
+(a) (8 points) I give you the observed payouts from all n rounds, X1, X2, . . . , Xn. What is the maximum likelihood estimate of , namely ML?
+Solution: We start by writing out the likelihood. Let X0 = 0. Then,
+
+n
+L(, ) = ( + Xi-1)e-(+Xi-1)(Xi-Xi-1-)I{Xi  Xi-1 + }
+i=1 n
+= I{  } ( + Xi-1)e-(+Xi-1)(Xi-Xi-1-).
+i=1
+where  := mini(Xi - Xi-1). For   , the likelihood is non-negative and strictly increasing in . For  > , the likelihood is zero. So, ML = . Note that the usual approach of finding the MLE by taking the derivative of the loglikelihood, setting it equal to zero, and solving for  won't work here. You could instead formulate the problem as a constrained optimization problem, with the constraint  -   0, in which case you immediately find that ML =  if the constraint is not active (but is not a situation of interest), or that ML =  if the constraint is active.
+
+(b) (6 points) Assume we know ML. I give you the observed payouts from all n rounds X1, X2, . . . , Xn. Write down an optimization problem for ML. Be sure to transform the optimization to a more computationally tractable form.
+
+Solution: We found ML in part (a) so we can write our log-likelihood as
+n
+(, ML) = [log( + Xi-1) - ( + Xi-1)(Xi - Xi-1 - ML)].
+i=1
+
+The optimization problem we want to solve is then
+
+n
+
+ML = arg max
+
+[log( + Xi-1) - ( + Xi-1)(Xi - Xi-1 - ML)]
+
+0
+
+i=1
+
+(c) (6 points) Write down an optimization algorithm that will optimize the function from the previous part. There are several choices; you may choose the simplest. Describe how the algorithm proceeds, and write an expression for the update rule, which should only involve , ML, and the data X1, X2, . . . , Xn.
+
+6
+
+Solution: We can use any variant of gradient ascent to find the maximum. To find the updates, we need the gradient of (, ML) with respect to .
+
+ (, ML) = n 
+i=1
+
+1  + Xi-1 - (Xi - Xi-1 - ML) .
+
+To
+
+simplify
+
+notation,
+
+let
+
+i
+
+:=
+
+Xi
+
+-
+
+Xi-1,
+
+and
+
+¯
+
+:=
+
+1 n
+
+n i=1
+
+i.
+
+Then
+
+our
+
+update
+
+is
+
+t+1 := t + t
+
+nM L
+
+-
+
+n¯
+
++
+
+n i=1
+
+t
+
+1 + Xi-1
+
+for some appropriate step size t.
+
+7
+
+4. (14 points) Naive Bayes
+
+(a) (6 points) Consider the following data set with covariates x =
+
+x1 x2
+
+:
+
+x1
+
+
+
+{T rue, F alse},
+
+x2  {Red, Green, Blue}, and class labels, y  {-1, +1}:
+
+y
+
+x1
+
+x2
+
+-1 False Green
+
+-1 True Green
+
+-1 False Blue
+
+-1 True Red
+
++1 False Green
+
++1 False Green
+
++1 False Green
+
++1 True Blue
+
+Train the Naive Bayes classifier on this data: estimate all necessary probability distributions.
+
+Solution: The Naive Bayes classifier is
+
+2
+f (x) = arg max P r(y) P r(xj|y)
+y{-1,+1} j=1
+Estimate each component from the data:
+
+P^r(y = -1) = 1/2
+P^r(x1 = T rue|y = -1) = 1/2 P^r(x1 = F alse|y = -1) = 1/2
+P^r(x2 = Red|y = -1) = 1/4 P^r(x2 = Green|y = -1) = 1/2
+P^r(x2 = Blue|y = -1) = 1/4 P^r(y = +1) = 1/2
+P^r(x1 = T rue|y = +1) = 1/4 P^r(x1 = F alse|y = +1) = 3/4
+P^r(x2 = Red|y = +1) = 0 P^r(x2 = Green|y = +1) = 3/4
+P^r(x2 = Blue|y = +1) = 1/4
+
+(b) (6 points) Classify the training data. Solution: The posterior probabilities given the data and the classification rules are:
+
+8
+
+y
+
+x1
+
+x2 P^r(y = -1|x)  P^r(y = +1|x)  y^
+
+-1 False Green
+
+1/8
+
+9/32
+
++1
+
+-1 True Green
+
+1/8
+
+3/32
+
+-1
+
+-1 False Blue
+
+1/16
+
+3/32
+
++1
+
+-1 True Red
+
+1/16
+
+0
+
+-1
+
++1 False Green
+
+1/8
+
+9/32
+
++1
+
++1 False Green
+
+1/8
+
+9/32
+
++1
+
++1 False Green
+
+1/8
+
+9/32
+
++1
+
++1 True Blue
+
+1/16
+
+1/32
+
+-1
+
+(c) (2 points) Calculate the misclassification rate of this classifier on the training data.
+
+Solution:
+
+We
+
+misclassify
+
+3
+
+data
+
+points,
+
+so
+
+the
+
+misclassification
+
+rate
+
+is
+
+3 8
+
+.
+
+9
+
+5. (25 points) Kernel perceptron.
+
+The perceptron has parameter z  Rd+1, and makes predictions of +1 or -1 for the input x using
+
+the classification function:
+
+f (x) = sgn
+
+1 x
+
+,z
+
+.
+
+To learn from a labeled dataset of (xi, yi), i = 1, . . . , n where xi  Rd and yi  {-1, +1} (with learning rate  = 1), the batch perceptron (i.e., all data points in one batch) learns by repeatedly updating z using the training rule:
+
+n
+zk+1 = zk - I{f (xi) = yi} · (-yi)
+i=1
+
+1 xi
+
+.
+
+Recall that the above update is the gradient descent update rule for the perceptron objective:
+
+n
+C(z) = I{f (xi) = yi} ·
+i=1
+
+z,
+
+1 xi
+
+.
+
+(a) (5 points) The perceptron can also be trained as a single-sample algorithm, updating z one
+
+training data point at a time. Write the training rule for single-sample perceptron, i.e., how to compute zk+1 given zk.
+
+Solution: We can decompose the zk+1 batch update rule into
+
+n i=1
+
+zik+1
+
+for
+
+i
+
+=
+
+1,
+
+...,
+
+n
+
+mini-updates. Then we can break these mini-updates into there own steps, and after each
+
+mini-update use that result for the next data point.
+
+Repeat:
+
+1. For i = 1, . . . , n: zk+1 = zk + I{f (xi) = yi} · yi ·
+
+1 xi
+
+2. k = k + 1
+
+(b) (5 points) Using the single sample perceptron update rule and beginning the updates at z0 = 0,
+
+after some number of iterations, z can be written as z =
+
+n i=1
+
+aiyi
+
+1 xi
+
+. What is ai?
+
+Solution: ai is a counter for the number of times the ith data point has been misclassified.
+
+(c) (10 points) We saw that the kernel trick produces non-linear SVM with a relatively small change to the linear SVM. We want to kernelize the perceptron algorithm to provide non-linear decision boundaries. With a mapping  to some feature space F, we rewrite the classifier as:
+
+f (x) = sgn
+
+(z), 
+
+1 x
+
+F
+
+n
+
+= sgn
+
+wik(xi, x) .
+
+i=1
+
+Implicit in the second equality is that we have enforced something called the "representer
+
+theorem", namely (z) =
+
+n i=1
+
+wi
+
+1 xi
+
+. Thus we now have parameters w1, ..., wn;
+
+which, for convenience, we can initialize to wi0 = 0 for i = 1, . . . , n.
+
+What is the training rule for kernel perceptron; that is, how do we update wk+1 from wk?
+
+10
+
+Solution: Note that in the linear case z can be written as a linear combination of the n training samples, if we take ai to be the number of times we made an error on the ith training point (ie it was misclassified):
+
+n
+
+1
+
+z = aiyi
+i=1
+
+xi
+
+Then the classification rule can be rewritten as:
+
+f (x) = sgn
+
+z,
+
+1 x
+
+= sgn
+
+n
+aiyi
+i=1
+
+1 xi
+
+,
+
+1 x
+
+By linearity of the scalar product, that can be broken down into a sum of scalar products:
+
+sgn
+
+n
+aiyi
+i=1
+
+1 xi
+
+,
+
+1 x
+
+n
+
+= sgn
+
+aiyi
+
+i=1
+
+1 xi
+
+,
+
+1 x
+
+Our classifier is now written in terms of ai  yi and scalar products between each training example xi and the new point we're trying to classify, x. We can then use the  expansion to replace the scalar product with a kernel:
+
+n
+
+f (x) = sgn
+
+aiyi 
+
+i=1
+
+1 xi
+
+,
+
+1 x
+
+F
+
+n
+
+= sgn
+
+aiyik(xi, x)
+
+i=1
+
+Thus we know wi = aiyi. Therefore our update rule is:
+
+wik+1 = wik + I{f (xi) = yi}yi
+
+(d) (5 points) Do you expect kernel perceptron would generalize well? Why or why not?
+Solution: No. We found that the linear perceptron was brittle in the sense that error was only measured, not margin. Making this nonlinear now will likely be even worse.
+
+11
+
+

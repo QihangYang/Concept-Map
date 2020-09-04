@@ -1,0 +1,228 @@
+Final Exam
+STAT W4606 May 9, 2016
+Instructions: Answer any 5 problems. If you do more than 5, clearly indicate the ones you want graded.
+
+1. Suppose that X, Y, Z are independent exponentially distributed random variables with parameter, 4, 5, 6, respectively. Thus,
+fX (x) = 4e-4x, x  0
+
+fY (y) = 5e-5y, y  0 and
+
+Find,
+
+(a) P r(2X < 3Y < 4Z)
+
+(b) P r(max(X, Y, Z) > 0.4)
+
+(c) P r(4X + 5Y + 6Z > 2.5)
+
+(d) P r(X + Y > 4Z)
+
+(e)
+
+E (X |X
+
+>
+
+1 2
+
+)
+
+fZ (z) = 6e-6z, z  0
+
+1
+
+2. Consider a branching process with offspring distribution,
+
+p(j) = P r(Z = j) = (0.7)j(0.3), j = 0, 1, · · ·
+
+Let Xn denote the population at time n, with X0 = 1. Find, (a) V ar(2X3 - 5) (b) P r(X8 = 0|X6 = 4) (c) limn P r(Xn = 0) (d) Find a non-trivial upper bound for,
+
+P r( max
+0n5
+
+Xn (EZ )n
+
+ 4)
+
+Hint: Doob's inequality (e) P r(X(2) = 1)
+
+2
+
+3. Processes, {Ni(t), t  0}, are independent Poisson processes with respective intensities, 1 =
+2, 2 = 3, and 3 = 4. An event from process i results in a cost Ci, with C1 = 10, C2 = 15 and C3 = 20. Define Yi to the ith cost in the superimposed process,
+
+3
+{N (t) = Nj(t), t  0}
+j=1
+
+Define, R(t) =
+
+N 1
+
+(t)
+
+Yi,
+
+the
+
+total
+
+cost
+
+for
+
+all
+
+events
+
+in
+
+[0, t],
+
+for
+
+the
+
+3
+
+processes
+
+combined.
+
+Find,
+
+(a) V arR(t)
+
+(b) P r(R(t) = 30 for some t)
+
+(c) P r(Y4 > 18) (d) V ar{E[N (2)|N3(1)]} (e) EV ar[N (3)|N (2)]
+
+3
+
+4. Consider a Markov chain with states {1, 2, 3, 4, 5} and transition matrix,
+
+12345
+
+1 0.2 0.8 0 0 0
+
+P=
+
+2 3
+
+0.3 0
+
+0.5 0.4
+
+0.2 0.3
+
+0 0.3
+
+0 0
+
+4 0 0 0.5 0.2 0.3
+
+5 0 0 0 0.5 0.5
+
+Let Xn denote the state at time n. Find, (a) limn P r(Xn+1 = 3, X2n = 4|X0 = 5) (b) Find the probability that starting in state 4, that state 5 is visited before state 2.
+
+(c) Find, ET1,2 = E[min k : Xk = 2|X0 = 1]
+
+(d) Let,
+
+Ik =
+
+1 if Xk = 1, 3, or 5 0 if Xk = 2 or 4
+
+Find,
+
+1n
+
+lim n n
+
+Ik|X0 = 3
+
+k=1
+
+(e) In (d), find limk P r(Ik = Ik+1 = 1)
+
+4
+
+5. Let {X(t), t  0} be standard Brownian motion. Find, (a) P r(max1s2 X(s)  X(1) + 1) (b) P r(maxs0(X(s) - s)  1) (c) P r(X(1) < 0, X(2) > 0) (d) Define T3 = min{t : X(t) = 3}. Find, P r(T3 > 2) (e) Define, T = min(T-1, T1), where Ta = min{t : X(t) = a}. Find the standard deviation of T.
+5
+
+6. Consider an M/M/3 queue with waiting a room for 2 people. Thus when all 3 servers are busy and 2 additional customers are waiting for service, arriving customers are turned away and lost to the system. The arrival rate  = 2 and the service rate µ = 1. Define X(t) to be the number of customers in the system at time t, which can equal 0, 1, 2, 3, 4 or 5.
+
+(a) Write down the Q matrix for this continuous time Markov chain
+
+(b) Find the long run proportion of time that all 3 servers are simultaneously busy.
+
+(c) Define Y (t) to be the number of busy servers at time t. Find, limt EY 2(t)
+
+(d) Find, ET2,4 = E min{t : X(t) = 4|X(0) = 2}
+
+(e) Find, limt
+
+1 t
+
+t 0
+
+P
+
+r(X (s)
+
+
+
+2)ds|X
+
+(0)
+
+=
+
+1
+
+6
+
+7. A fair die is rolled until the first even outcome (2,4 or 6) appears. Let N denote the number
+
+of rolls required, and let SN =
+
+N i=1
+
+Xi,
+
+where
+
+Xi
+
+is
+
+the
+
+outcome
+
+of
+
+roll
+
+i.
+
+Find,
+
+(a) V ar(E(SN |N ))
+
+(b) P r(V ar(SN |N ) > 3)
+
+(c) Use Wald's identity to compute ESN
+
+(d) Find the value of c for which,
+
+{Tn = (Sn - nEX)2 - cn, n = 1, 2, · · · }
+
+is a martingale (e) Find, Standard Deviation(SN )
+
+7
+
+8. Let {X(t), t  0} be standard Brownian motion. Find, (a) P r(X(1) + X(2) > 3|X(3) = 4) (b) Define, T1 = min{t : X(t) + 2t = 1}. Find the variance of T1. (c) Use Ito's Lemma to find an integral expression for (X(t))3. (First find d[(X(t))3], then integrate). (d) In (b), find P r(T-1 < T1), where T-1 = {min t : X(t) + 2t = -1, or  if mint0{X(t) + 2t} > -1} (e) In (d), find P r(T-1 < )
+8
+
+
